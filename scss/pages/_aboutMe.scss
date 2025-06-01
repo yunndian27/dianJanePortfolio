@@ -1,0 +1,17 @@
+/* about me ----------------------------- */ 
+.aboutMeWrap {
+  h1 {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .returnBtn {
+    font-size: 1.2rem;
+    a {
+      text-decoration: none;
+      padding: 10px 20px;
+      background: $color_func;
+      color: $color_white;
+      @include border-radius(7px);
+    }
+  }
+}

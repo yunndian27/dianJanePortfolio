@@ -1,0 +1,82 @@
+.article02 {
+
+  .skill-item {
+    width: calc( 100% / 2 );
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+
+    @include sm {
+      width: calc( 100% / 3 );
+      margin-bottom: 2rem;
+    }
+
+    @include lg {
+      width: calc( 100% / 4 );
+      margin-bottom: 3.75rem;
+      flex-direction: column;
+      cursor: default;
+    }
+
+    h4 {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      @include sm {
+        font-size: 1.25rem;
+      }
+      
+      @include lg {
+        margin-top: 0.75rem;
+      }
+    }
+    p {
+      color: $color_grey_light;
+      margin-bottom: 0;
+      
+    }
+
+    &:hover {
+      h4, p {
+        color: $color_func;
+      }
+      .skill-pic {
+        filter: invert(80%) sepia(90%) saturate(90%) hue-rotate(320deg) brightness(70%) contrast(80%);
+      }
+    }
+  }
+  .skill-pic {
+    // display: none;
+    width: 1.5rem;
+
+    @include sm {
+      width: 2rem;
+    }
+    @include lg {
+      width: 3.75rem;
+    }
+  }
+  
+  .skill-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    @include lg {
+      margin-top: 3.75rem;
+    }
+  }
+
+  .skill-intro {
+    margin-left: 0.5rem;
+
+    @include sm {
+      margin-left: 1rem;
+    }
+
+    @include lg {
+      margin-left: 0;
+    }
+  }
+
+}

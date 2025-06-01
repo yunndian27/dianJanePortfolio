@@ -1,0 +1,19 @@
+footer {
+  background-color: $color_grey;
+  text-align: center;
+
+  .container {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color_primary;
+  }
+
+  p {
+    color: $color_white;
+    margin-top: 1.25rem;
+  }
+}

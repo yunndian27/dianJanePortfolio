@@ -1,0 +1,162 @@
+.article03 {
+
+  h2 {
+    padding: 0 1.25rem;
+    @include sm {
+      padding: 0;
+    }
+  }
+
+  section {
+    padding: 1.5rem 1.25rem;
+    @include lg {
+      padding: 2.5rem 1.25rem;
+    }
+  }
+
+  .projectSwiper {
+    background-color: rgba($color: $color_secondary, $alpha: 0.3);
+    border-radius: 1.5rem;
+    margin: 1.25rem 0 1.875rem 0;
+
+    .swiper-slide {
+      padding: 2.5rem 2.5rem;
+      @include sm {
+        padding: 2.5rem 3.5rem;
+      }
+      @include lg {
+        padding: 3.75rem 7.5rem;
+      }
+    }
+
+    .projects-item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+
+      @include sm {
+        flex-direction: row;
+      }
+
+      &.rowChange {
+        flex-direction: column;
+
+        @include sm {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    .project-info, .project-pic {
+      width: 100%;
+      @include sm {
+        width: calc( 100% / 2 - 1rem);
+      }
+      @include lg {
+        width: calc( 100% / 2 - 3.75rem);
+      }
+    }
+
+    .project-pic {
+      margin-top: 1.2rem;
+      
+      img {
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+
+        @include sm {
+          // height: 300px;
+          max-height: 300px;
+        }
+      }
+
+      @include sm {
+        margin-top: 0;
+      }
+    }
+
+    .info-tool {
+      color: rgba($color: $color_grey, $alpha: 0.5);
+    }
+
+    .info-title {
+      margin-top: 0.875rem;
+      @include sm {
+        margin-top: 1.875rem;
+      }
+    }
+
+    .info-intro {
+      color: rgba($color: $color_grey, $alpha: 0.8);
+      margin: 0.8rem 0;
+      @include sm {
+        margin: 1.875rem 0;
+      }
+    }
+
+    .info-link {
+      display: inline-block;
+      text-decoration: none;
+      color: $color_func;
+      background-color: $color_white;
+      border: 0.063rem solid $color_func;
+      border-radius: 1.25rem;
+      padding: 0.5rem 3.75rem;
+
+      &:hover {
+        color: $color_white;
+        background-color: $color_func;
+      }
+    }
+  
+  }
+
+  .threePicSwiper {
+    padding: 20px 20px 40px 20px;
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: $color_white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // border-radius: 1.5rem;
+    }
+    .threePics-item {
+      background: rgba($color: $color_secondary, $alpha: 0.3);
+      border-radius: 1.5rem;
+      width: 100%;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 450px;
+      object-fit: contain;
+    }
+
+    .threePics-title {
+      margin-top: 1rem;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 0rem;
+      letter-spacing: 2px;
+    }
+
+    .threePics-tool {
+      font-size: 0.8rem;
+      color: $color_grey_light;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    filter: invert(0%) sepia(50%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(50%);
+  }
+
+  
+}

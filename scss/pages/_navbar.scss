@@ -1,0 +1,61 @@
+/* navbar導覽列 --------------------------------------------------------------------------------------- */ 
+.dianNav {
+  background: #fff;
+  font-family: 'Noto Sans TC', sans-serif;
+
+  .container {
+    justify-content: space-around;
+  }
+
+  .sidebar {
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 1.125rem;
+    text-align: center;
+    color: $color_grey;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: .5s;
+    &:hover {
+      color: #fff;
+      background: $color_func;
+    }
+    &:active{
+      font-weight: bolder;
+      color: #fff;
+      background: $color_func;
+    }
+  }
+
+  @include md {
+    .sidebar {
+      justify-content: flex-end;
+    }
+  }
+
+
+}
+
+.dianNavbar {
+  background: $color_white;
+  .collapse {
+    justify-content: space-between;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+    @include sm {
+      padding: 0;
+    }
+  }
+
+  .social-link {
+    @include transition(all .25s ease-in-out);
+    &:hover {
+      filter: invert(80%) sepia(90%) saturate(90%) hue-rotate(320deg) brightness(70%) contrast(80%);
+    }
+  }
+
+}

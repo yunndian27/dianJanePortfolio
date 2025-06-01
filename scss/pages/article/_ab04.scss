@@ -1,0 +1,124 @@
+.article04 {
+  background-color: rgba($color: $color_primary, $alpha: 0.5);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include sm {
+      flex-direction: row;
+    }
+  }
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    h2 {
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    @include sm {
+      width: calc( 100% / 2 );
+    }
+    @include lg {
+      justify-content: center;
+    }
+  }
+
+  .connect-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    @include lg {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
+  }
+
+  .connect-pic {
+    width: 180px;
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .connect-info {
+    margin-left: 0;
+    margin-top: 1rem;
+    @include lg {
+      margin-left: 1.5rem;
+      margin-top: 0;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+      color: rgba($color: $color_grey, $alpha: .4);
+    }
+  }
+
+  .nav-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include sm {
+      justify-content: space-around;
+    }
+  }
+
+  .social-item {
+    width: 40px;
+    @include transition(all .25s ease-in-out);
+    
+    &:hover {
+      filter: invert(80%) sepia(90%) saturate(90%) hue-rotate(320deg) brightness(70%) contrast(80%);
+    }
+
+    @include lg {
+      width: 28px;
+    }
+  }
+
+  .connect-form {
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      color: rgba($color: $color_grey, $alpha: .4);
+      padding: 1rem;
+      border-radius: 1rem;
+      border: none;
+      margin-bottom: 1.875rem;
+
+      @include sm {
+        padding: 1.125rem 1.875rem;
+        border-radius: 1.875rem;
+      }
+    }
+
+    input[type="submit"]{
+      width: 40%;
+      color: $color_func;
+      background-color: rgba($color: $color_primary, $alpha: 0);
+      border: 1.5px solid $color_func;
+      margin-bottom: 0;
+      @include transition(all .25s ease-in-out);
+
+      &:hover {
+        color: $color_white;
+        background-color: $color_func;
+      }
+    }
+  }
+}
