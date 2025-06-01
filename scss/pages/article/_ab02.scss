@@ -13,7 +13,8 @@
 
     @include lg {
       width: calc( 100% / 4 );
-      margin-bottom: 3.75rem;
+      padding: 1rem;
+      margin-bottom: 2.3rem;
       flex-direction: column;
       cursor: default;
     }

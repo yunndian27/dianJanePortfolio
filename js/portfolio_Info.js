@@ -60,6 +60,18 @@ new Vue({
         { imgUrl: './images/illustration/illustration010.jpg', tool: 'Procreate', title: '蜂蜜與熊' },
         { imgUrl: './images/illustration/illustration011.jpg', tool: 'Procreate', title: '得體生活--Line貼圖' },
         { imgUrl: './images/illustration/line03.jpg', tool: 'Procreate', title: '刺蝟麗麗--Line貼圖' }
+      ],
+      skills:[
+        {imgUrl:'./images/icon/icon-devicon-plain_photoshop.svg',title: 'Adobe Photoshop', text:'修圖、去背或合成'},
+        {imgUrl:'./images/icon/icon-simple-icons_adobeillustrator.svg',title: 'Adobe Illustrator', text:'印刷文宣、活動專案輸出物'},
+        {imgUrl:'./images/icon/icon-solar_figma-bold-duotone.svg',title: 'Figma', text:'網頁設計、介面排版'},
+        {imgUrl:'./images/icon/icon-simple-icons_adobeindesign.svg',title: 'Adobe Indesign', text:'刊物、雜誌排版'},
+        {imgUrl:'./images/icon/icon-icomoon-free_html-five.svg',title: 'HTML5 / CSS3', text:'能建構語意化網頁結構與響應式排版，具備實際開發經驗'},
+        {imgUrl:'./images/icon/icon-fa6-brands_sass.svg',title: 'Sass', text:'能運用變數、巢狀結構與 mixin 來提高樣式的重用性與可維護性'},
+        {imgUrl:'./images/icon/icon-bi_bootstrap-fill.svg',title: 'Bootstrap', text:'熟悉網格系統快速建立響應式版面'},
+        {imgUrl:'./images/icon/icon-devicon-plain_jquery-wordmark.svg',title: 'jQuery', text:'操作DOM、處理事件'},
+        {imgUrl:'/images/icon/icon-ri_javascript-fill.svg',title: 'JavaScript', text:'能使用條件判斷與迴圈來實現基本邏輯'},
+        {imgUrl:'./images/icon/icon-simple-icons_git.svg',title: 'Git', text:'進行基本的版本控制'},
       ]
     }
   },

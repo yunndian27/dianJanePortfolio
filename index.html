@@ -65,10 +65,9 @@
       <article class="article01">
         <div class="container">
           <section class="intro-item">
-            <h2 class="intro-title"><span>4.5</span> 年<br>專業學習 <span class="en-caveat">Education</span></h2>
+            <h2 class="intro-title"><span>13+</span> 件<br>專案設計 <span class="en-caveat">Projects</span></h2>
             <div class="intro-group">
-              <p>前端網頁開發技術<br>勞動力發展署北基宜花金馬分署 泰山職訓局  2021.02 - 2021.08 </p>
-              <p>多媒體設計<br>致理技術學院  2015.09 - 2011.07  </p>
+              <p>視覺專業的我，總積極的讓畫面達成美與平衡、介面視覺達成合理化，同時了解網頁與資料的連結關係，能獨立完成靜動態的前端切版，天衣無縫的解決客戶與長官困擾，滿意我所提供的專業價值。</p>
             </div>
           </section>
           <section class="intro-item">
@@ -78,9 +77,10 @@
             </div>
           </section>
           <section class="intro-item">
-            <h2 class="intro-title"><span>13+</span> 件<br>專案設計 <span class="en-caveat">Projects</span></h2>
+            <h2 class="intro-title"><span>4.5</span> 年<br>專業學習 <span class="en-caveat">Education</span></h2>
             <div class="intro-group">
-              <p>視覺專業的我，總積極的讓畫面達成美與平衡、介面視覺達成合理化，同時了解網頁與資料的連結關係，能獨立完成靜動態的前端切版，天衣無縫的解決客戶與長官困擾，滿意我所提供的專業價值。</p>
+              <p>前端網頁開發技術<br>勞動力發展署北基宜花金馬分署 泰山職訓局  2021.02 - 2021.08 </p>
+              <p>多媒體設計<br>致理技術學院  2015.09 - 2011.07  </p>
             </div>
           </section>
         </div>
@@ -90,74 +90,11 @@
         <div class="container">
           <h2>專業技能 <span class="en-caveat">My Skills</span></h2>
           <div class="skill-group">
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
+            <div class="skill-item" v-for="skill in skills">
+              <div class="skill-pic"><img :src="skill.imgUrl" :alt="skill.title"></div>
               <div class="skill-intro">
-                <h4>Adobe Photoshop</h4>
-                <p>7 年</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
-              <div class="skill-intro">
-                <h4>Adobe Illustrator</h4>
-                <p>7 年</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
-              <div class="skill-intro">
-                <h4>Figma</h4>
-                <p>2 年</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
-              <div class="skill-intro">
-                <h4>Adobe Indesign</h4>
-                <p>4 年</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
-              <div class="skill-intro">
-                <h4>HTML5 / CSS3</h4>
-                <p>3 年</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
-              <div class="skill-intro">
-                <h4>Sass</h4>
-                <p>2 年</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
-              <div class="skill-intro">
-                <h4>Bootstrap</h4>
-                <p>3 年</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
-              <div class="skill-intro">
-                <h4>jQuery</h4>
-                <p>2 年</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
-              <div class="skill-intro">
-                <h4>JavaScript</h4>
-                <p>2 年</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-pic"><img src="./images/devicon-plain_photoshop.svg" alt=""></div>
-              <div class="skill-intro">
-                <h4>Git</h4>
-                <p>2 年</p>
+                <h4>{{ skill.title }}</h4>
+                <p>{{ skill.text }}</p>
               </div>
             </div>
           </div>
