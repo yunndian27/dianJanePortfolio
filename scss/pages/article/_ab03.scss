@@ -130,12 +130,14 @@
       background: rgba($color: $color_secondary, $alpha: 0.3);
       border-radius: 1.5rem;
       width: 100%;
+      height: 380px;
+      overflow: hidden;
     }
 
     .swiper-slide img {
       display: block;
       width: 100%;
-      height: 450px;
+      height: 100%;
       object-fit: contain;
     }
 
@@ -155,8 +157,11 @@
 
   .swiper-button-prev,
   .swiper-button-next {
-    filter: invert(0%) sepia(50%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(50%);
+    // filter: invert(0%) sepia(50%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(50%);
+    color: $color_func;
   }
 
-  
+  .swiper-pagination-bullet-active {
+    background-color: $color_func;
+  }
 }

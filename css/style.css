@@ -283,8 +283,8 @@ header .pic-group img {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: -1;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0);
   -webkit-transition: all 0.25s ease-in-out;
@@ -613,11 +613,13 @@ header .pic-group img {
   background: rgba(223, 228, 238, 0.3);
   border-radius: 1.5rem;
   width: 100%;
+  height: 380px;
+  overflow: hidden;
 }
 .article03 .threePicSwiper .swiper-slide img {
   display: block;
   width: 100%;
-  height: 450px;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -634,8 +636,10 @@ header .pic-group img {
 }
 .article03 .swiper-button-prev,
 .article03 .swiper-button-next {
-  -webkit-filter: invert(0%) sepia(50%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(50%);
-          filter: invert(0%) sepia(50%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(50%);
+  color: #B07F6B;
+}
+.article03 .swiper-pagination-bullet-active {
+  background-color: #B07F6B;
 }
 
 .article04 {
