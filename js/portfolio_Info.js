@@ -26,15 +26,17 @@ new Vue({
         { link: 'https://github.com/yunndian27/trailfitnesstw0503', imgUrl: './images/website/website008.jpg',tool: 'line robot', info: 'line機器人 | 健身步道', explain: '串接政府公開資料，使用 Node.js 製作查詢步道資料的 LINE 機器人，並部署到 Heroku。' }
       ],
       dailyUis: [
-        { imgUrl: './images/DailyUI/DailyUI_01.jpg', tool:'一頁式活動 設計&切版', title: '菜鳥不吃虧 助理自救會', text: '為傳達菜鳥也可以輕鬆找到好工作，所以頁面設計得較為活潑，透過沉穩藍打造自救會安穩感，活潑橘傳達可以輕鬆達成擺脫菜鳥稱號，營造接地氣得活力感。' },
-        { imgUrl: './images/DailyUI/DailyUI_02.jpg', tool:'一頁式活動 設計&切版', title: '遠端工作特輯｜ByeBye啦!!通勤人生!', text: '為了打造互動式遠端工作探討，設計圖文的測驗豐富整體的內容，排版與切版都挑戰以較新的方式呈現。' },
-        { imgUrl: './images/DailyUI/DailyUI_03.jpg', tool:'一頁式活動 設計&切版', title: '慢食靜好愛地球', text: '因朋友公司活動需求，首次接案製作網頁設計與切版，從提供的海報插畫延伸至網頁整體視覺，延續整體感以利活動推廣，並加上動態讓整體更加活潑親民。' },
-        { imgUrl: './images/DailyUI/DailyUI_001.jpg', tool:'Daily UI 挑戰', title: '寵物監視 註冊頁', text: '使用寵物監視器前需先註冊。' },
-        { imgUrl: './images/DailyUI/DailyUI_002.jpg', tool:'Daily UI 挑戰', title: '商品購物頁', text: '購買商品流程，確認後提供選擇付費方式。' },
-        { imgUrl: './images/DailyUI/DailyUI_003.jpg', tool:'Daily UI 挑戰', title: '旅行論壇 註冊頁', text: '電腦版註冊選擇畫面，提供多元註冊方式。' },
-        { imgUrl: './images/DailyUI/DailyUI_004.jpg', tool:'Daily UI 挑戰', title: '旅行論壇 手機版 註冊頁', text: '註冊選擇畫面，提供多元註冊方式。' },
-        { imgUrl: './images/DailyUI/DailyUI_005.jpg', tool:'Daily UI 挑戰', title: '購買旅行套組商品', text: '步驟式購物流程，一步步帶入填寫商品。' },
-        { imgUrl: './images/DailyUI/DailyUI_006.jpg', tool:'Daily UI 挑戰', title: '購買旅行套組商品', text: '使用寵物監視器前需先註冊。' }
+        { imgUrl: './images/DailyUI/DailyUI_01.jpg', tool:'一頁式活動頁｜設計&切版', title: '菜鳥不吃虧 助理自救會｜特輯頁｜PC版', text: '為傳達菜鳥也可以輕鬆找到好工作，所以頁面設計得較為活潑，透過沉穩藍打造自救會安穩感，活潑橘傳達可以輕鬆達成擺脫菜鳥稱號，營造接地氣得活力感。' },
+        { imgUrl: './images/DailyUI/DailyUI_02.jpg', tool:'一頁式活動頁｜設計&切版', title: '遠端新生活・ByeBye啦！！通勤人生｜特輯頁｜PC版', text: '為了打造互動式遠端工作探討，設計圖文的測驗豐富整體的內容，排版與切版都挑戰以較新的方式呈現。' },
+        { imgUrl: './images/DailyUI/DailyUI_03.jpg', tool:'一頁式活動頁｜設計&切版', title: '慢食靜好愛地球｜活動頁｜PC版', text: '首次接案製作網頁設計與切版，從廠商提供的海報插畫延伸至網頁整體視覺，讓線上線下視覺統一呈現有利活動推廣，網頁上透過動小動畫讓整體更加活潑親民。' },
+        { imgUrl: './images/DailyUI/DailyUI_001.jpg', tool:'Daily UI 挑戰', title: '寵物監視器｜註冊頁｜PC & M版', text: '這是寵物監視器使用前的註冊頁面，以手機電腦為主要，圖中的插圖皆用 illustrator 繪製完成，顏色以暖色調為主，希望創造溫暖安心感！' },
+        { imgUrl: './images/DailyUI/DailyUI_002.jpg', tool:'Daily UI 挑戰', title: '電商購物-運動鞋｜結帳頁｜M版', text: '電商購物最重要的環節就是付款介面，從商品挑選、選定規格放入購物車、進入結帳畫面，一連串的步驟都緊緊扣住，因此嘗試將畫面以重點資訊呈現，讓使用者能夠專注！' },
+        // { imgUrl: './images/DailyUI/DailyUI_003.jpg', tool:'Daily UI 挑戰', title: '旅行論壇 註冊頁', text: '電腦版註冊選擇畫面，提供多元註冊方式。' },
+        // { imgUrl: './images/DailyUI/DailyUI_004.jpg', tool:'Daily UI 挑戰', title: '旅行論壇 手機版 註冊頁', text: '註冊選擇畫面，提供多元註冊方式。' },
+        // { imgUrl: './images/DailyUI/DailyUI_005.jpg', tool:'Daily UI 挑戰', title: '購買旅行套組商品', text: '步驟式購物流程，一步步帶入填寫商品。' },
+        // { imgUrl: './images/DailyUI/DailyUI_006.jpg', tool:'Daily UI 挑戰', title: '購買旅行套組商品', text: '使用寵物監視器前需先註冊。' },
+        { imgUrl: './images/DailyUI/DailyUI_007.jpg', tool:'Daily UI 挑戰', title: '使用者個人資料頁 User Profile｜PC版', text: '以旅遊部落格為發想，為使用者設計簡潔的個人資料頁，從上到下讓會員展現個人魅力，像社群一樣能設定封面、旅行經驗值、發表過的文章、基本的個人簡介…等，每個細節都舒適簡潔呈現。' },
+        { imgUrl: './images/DailyUI/DailyUI_008.jpg', tool:'Daily UI 挑戰', title: '排行榜 Leaderboard｜PC版', text: '延續旅遊部落格主題，將發布過的文章做計算，讓會員們之間透過排行榜知道誰的旅行經驗豐富，可以追蹤了解他的經驗分享，同樣維持頁面的整體簡潔得以打造整體感。' }
       ],
       graphics: [
         { imgUrl: './images/graphic/graphic001.jpg', title: '年曆設計', tool: 'Photoshop', text: '以2021年牛年為發想主軸，用扭轉乾坤帶出牛年好運。' },
