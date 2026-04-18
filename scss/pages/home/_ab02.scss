@@ -1,3 +1,4 @@
+@use "../../tokens" as *;
 .article02 {
 
   .skill-item {
@@ -33,14 +34,14 @@
       }
     }
     p {
-      color: $color_grey_light;
+      color: $color_text_tertiary;
       margin-bottom: 0;
       
     }
 
     &:hover {
       h4, p {
-        color: $color_func;
+        color: $color_secondary;
       }
       .skill-pic {
         filter: invert(80%) sepia(90%) saturate(90%) hue-rotate(320deg) brightness(70%) contrast(80%);

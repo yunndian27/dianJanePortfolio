@@ -1,8 +1,9 @@
+@use "../../tokens" as *;
 .article01 {
   background-color: rgba($color: $color_primary, $alpha: 0.3);
 
   .intro-item {
-    color: $color_grey_light;
+    color: $color_text_primary;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -29,12 +30,12 @@
     .intro-title {
       width: 100%;
       font-size: 1.5rem;
-      color: $color_func;
+      color: $color_secondary;
 
       @include lg {
         font-size: 1.75rem;
         width: 30%;
-        color: $color_grey_light;
+        color: $color_text_primary;
       }
 
       span {
@@ -55,7 +56,7 @@
     .intro-group {
       width: 100%;
       font-size: 1.1rem;
-      color: $color_grey;
+      color: $color_text_primary;
       @include transition(all .25s ease-in-out);
 
       @include sm {
@@ -65,7 +66,7 @@
       @include lg {
         width: 70%;
         font-size: 1.3rem;
-        color: $color_grey_light;
+        color: $color_text_primary;
       }
     }
 
@@ -75,17 +76,17 @@
       flex-direction: row;
 
       &:hover {
-        color: $color_grey;
+        color: $color_text_primary;
   
         &::after {
           background-color: rgba($color: $color_white, $alpha: 1);
         }
   
         .intro-title {
-          color: $color_func;
+          color: $color_secondary;
         }
         .intro-group {
-          color: $color_grey;
+          color: $color_text_primary;
         }
       }
     }

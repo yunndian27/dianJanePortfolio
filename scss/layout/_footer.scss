@@ -1,5 +1,6 @@
+@use '../tokens' as *;
 footer {
-  background-color: $color_grey;
+  background-color: $color_text_primary;
   text-align: center;
 
   .container {

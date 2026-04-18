@@ -1,0 +1,47 @@
+// ============================================================
+// Modern Sass Reset (2026 Version)
+// ============================================================
+
+// 1. Box sizing 規則：讓寬度計算包含邊框與內距
+*, *::before, *::after
+  box-sizing: border-box
+
+// 2. 移除所有邊距，交由 Layout 與 Components 控管
+*
+  margin: 0
+  padding: 0
+  font: inherit
+
+// 3. 基本頁面設定
+html
+  // 讓滾動變得平滑，提升使用者體驗
+  scroll-behavior: smooth
+  // 防止行動裝置文字大小自動調整
+  -webkit-text-size-adjust: none
+
+body
+  // 建立良好的行高起點，避免文字擠在一起
+  line-height: 1.5
+  // 字體平滑處理，讓文字在不同瀏覽器看起來更精緻
+  -webkit-font-smoothing: antialiased
+  // 避免橫向捲軸
+  min-height: 100vh
+  text-rendering: optimizeSpeed
+
+// 4. 媒體元素優化：避免圖片下方出現多餘空格
+img, picture, video, canvas, svg
+  display: block
+  max-width: 100%
+  height: auto
+
+// 5. 表單元素重置：確保跨瀏覽器一致性
+input, button, textarea, select
+  font: inherit
+
+// 6. 標題與段落：防止文字過長撐破佈局
+p, h1, h2, h3, h4, h5, h6
+  overflow-wrap: break-word
+
+// 7. 針對現代框架（如 React/Next.js/Vue）的根節點優化
+#root, #__next, .main-wrapper
+  isolation: isolate

@@ -1,3 +1,4 @@
+@use "../tokens" as *;
 /* about me ----------------------------- */ 
 .aboutMeWrap {
   h1 {
@@ -9,7 +10,7 @@
     a {
       text-decoration: none;
       padding: 10px 20px;
-      background: $color_func;
+      background: $color_secondary;
       color: $color_white;
       @include border-radius(7px);
     }

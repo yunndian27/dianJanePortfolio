@@ -1,3 +1,4 @@
+@use "../../tokens" as *;
 .article04 {
   background-color: rgba($color: $color_primary, $alpha: 0.5);
 
@@ -59,7 +60,7 @@
 
     h5 {
       font-size: 1.25rem;
-      color: rgba($color: $color_grey, $alpha: .4);
+      color: rgba($color: $color_text_primary, $alpha: .4);
     }
   }
 
@@ -95,7 +96,7 @@
     input,
     textarea {
       width: 100%;
-      color: rgba($color: $color_grey, $alpha: .4);
+      color: rgba($color: $color_text_primary, $alpha: .4);
       padding: 1rem;
       border-radius: 1rem;
       border: none;
@@ -109,15 +110,15 @@
 
     input[type="submit"]{
       width: 40%;
-      color: $color_func;
+      color: $color_secondary;
       background-color: rgba($color: $color_primary, $alpha: 0);
-      border: 1.5px solid $color_func;
+      border: 1.5px solid $color_secondary;
       margin-bottom: 0;
       @include transition(all .25s ease-in-out);
 
       &:hover {
         color: $color_white;
-        background-color: $color_func;
+        background-color: $color_secondary;
       }
     }
   }

@@ -1,0 +1,33 @@
+@use '../tokens' as *
+  
+body 
+  font-size: $font-size-base
+  line-height: 1.6
+  font-family: 'Noto Sans TC', sans-serif
+  color: $color_text_primary
+  .container 
+    padding: 1.25rem 0
+  .en-caveat 
+    font-family: 'Caveat', cursive
+  img 
+    width: 100%
+  a 
+    @include transition(all .25s ease-in-out)
+
+
+main 
+  margin-top: 4.563rem
+
+
+header, .article01, .article02, .article04 
+  .container 
+    padding: 2.5rem 1.25rem
+    @include sm 
+      padding: 2.5rem 0
+    @include lg 
+      padding: 6.875rem 0
+
+h1
+  font-size: $font-size-h1
+  line-height: 1.2
+  font-weight: 700

@@ -1,3 +1,4 @@
+@use '../tokens' as *;
 /* navbar導覽列 --------------------------------------------------------------------------------------- */ 
 .dianNav {
   background: #fff;
@@ -14,18 +15,18 @@
   .nav-link {
     font-size: 1.125rem;
     text-align: center;
-    color: $color_grey;
+    color: $color_text_primary;
     padding-left: 1rem;
     padding-right: 1rem;
     transition: .5s;
     &:hover {
       color: #fff;
-      background: $color_func;
+      background: $color_secondary;
     }
     &:active{
       font-weight: bolder;
       color: #fff;
-      background: $color_func;
+      background: $color_secondary;
     }
   }
 
