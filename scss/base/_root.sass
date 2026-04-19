@@ -1,33 +1,22 @@
+// base/_root.sass
 @use '../tokens' as *
-  
-body 
-  font-size: $font-size-base
-  line-height: 1.6
-  font-family: 'Noto Sans TC', sans-serif
-  color: $color_text_primary
-  .container 
-    padding: 1.25rem 0
-  .en-caveat 
-    font-family: 'Caveat', cursive
-  img 
-    width: 100%
-  a 
-    @include transition(all .25s ease-in-out)
 
+:root
+  // 1. 顏色映射 (使用 Sass 插補語法 #{$var})
+  --color-primary: #{$color-primary}
+  --color-bg: #{$color_bg}
+  --color-text: #{$color_text_primary}
 
-main 
-  margin-top: 4.563rem
+  // 2. 字體階層
+  --font-size-base: #{$font-size-base}
+  --font-size-h1: #{$font-size-h1}
+  --line-height-base: #{$line-height-base}
 
+  // 3. 間距單位
+  --space-unit: #{$space-unit}
+  --space-md: #{$space-md}
+  --space-lg: #{$space-lg}
 
-header, .article01, .article02, .article04 
-  .container 
-    padding: 2.5rem 1.25rem
-    @include sm 
-      padding: 2.5rem 0
-    @include lg 
-      padding: 6.875rem 0
-
-h1
-  font-size: $font-size-h1
-  line-height: 1.2
-  font-weight: 700
+  // 4. 佈局數值
+  --header-height: 80px
+  --container-max-width: 1200px

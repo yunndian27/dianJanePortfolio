@@ -96,21 +96,6 @@
         margin: 1.875rem 0;
       }
     }
-
-    .info-link {
-      display: inline-block;
-      text-decoration: none;
-      color: $color_secondary;
-      background-color: $color_white;
-      border: 0.063rem solid $color_secondary;
-      border-radius: 1.25rem;
-      padding: 0.5rem 3.75rem;
-
-      &:hover {
-        color: $color_white;
-        background-color: $color_secondary;
-      }
-    }
   
   }
 

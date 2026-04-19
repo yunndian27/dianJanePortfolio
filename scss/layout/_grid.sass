@@ -1,0 +1,8 @@
+@use '../tokens' as *
+  
+.container 
+  padding: $space-md $space-md
+  @include sm 
+    padding: $space-xl 0
+  @include lg 
+    padding: calc( $space-unit * 20 ) 0

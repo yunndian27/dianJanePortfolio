@@ -1,8 +1,39 @@
-// 定義比例常數
+// scss/tokens/_typography.sass
+
+// ============================================================
+// 1. 字體比例計算
+// ============================================================
 $type-scale-ratio: 1.25
-  
-// 透過計算定義 Tokens
 $font-size-base: 16px
+
 $font-size-h3: $font-size-base * $type-scale-ratio
 $font-size-h2: $font-size-h3 * $type-scale-ratio
 $font-size-h1: $font-size-h2 * $type-scale-ratio
+$font-size-sm: calc($font-size-base / $type-scale-ratio)
+
+// ============================================================
+// 2. 字體家族 (Font Families)
+// ============================================================
+$font-family-primary: 'Noto Sans TC', sans-serif
+$font-family-accent: 'Caveat', cursive
+
+// ============================================================
+// 3. 字重 (Font Weights)
+// ============================================================
+$font-weight-regular: 400
+$font-weight-medium: 500
+$font-weight-bold: 700
+
+// ============================================================
+// 4. 行高 (Line Heights)
+// ============================================================
+$line-height-base: 1.6    // 適合內文，確保長篇閱讀不疲勞
+$line-height-tight: 1.2   // 適合大標題，標題字級大，行高需縮短才顯得有力
+$line-height-none: 1      // 適合按鈕或單行標籤
+
+// ============================================================
+// 5. 字距 (Letter Spacing)
+// ============================================================
+$letter-spacing-tight: -0.02em // 標題常用，讓大字更緊湊
+$letter-spacing-normal: 0
+$letter-spacing-wide: 0.05em   // 全大寫文字或小標籤常用

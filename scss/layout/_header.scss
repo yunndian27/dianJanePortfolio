@@ -23,25 +23,6 @@ header {
     }
   }
 
-  .btn-link {
-    background: $color_secondary;
-    padding: 15px 40px;
-    text-decoration: none;
-    color: $color_white;
-    border-radius: 40px;
-    margin: 10px;
-    @include transition(all .5s ease-in-out);
-
-    &:hover {
-      background: $color_primary;
-      color: $color_text_primary;
-    }
-
-    @include sm {
-      padding: 15px 80px;
-    }
-  }
-
   .sayHi, .myPic {
     width: 100%;
 

@@ -1,0 +1,12 @@
+// scss/tokens/_layout.sass
+@use '../tokens' as *
+
+// 定義佈局相關的數值
+$header-height: 80px
+// $sidebar-width: 250px
+// $container-max-width: 1200px
+  
+main 
+  margin-top: $header-height
+  min-height: calc( 100vh - $header-height )
+  scroll-padding-top: $header-height

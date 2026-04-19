@@ -1,0 +1,37 @@
+@use '../tokens' as *
+  
+body
+  font-family: $font-family-primary
+  font-size: $font-size-base
+  font-weight: $font-weight-regular
+  line-height: $line-height-base
+  letter-spacing: $letter-spacing-normal
+  color: $color_text_primary
+img 
+  width: 100%
+a 
+  @include transition(all .25s ease-in-out)
+
+h1
+  font-size: $font-size-h1
+  font-weight: $font-weight-bold
+  line-height: $line-height-tight
+  letter-spacing: $letter-spacing-tight
+  color: $color_secondary
+
+h2
+  font-size: $font-size-h2
+  font-weight: $font-weight-medium
+  line-height: $line-height-tight
+  letter-spacing: $letter-spacing-tight
+  color: $color_black
+
+h3
+  font-size: $font-size-h3
+  font-weight: $font-weight-bold
+  line-height: $line-height-base
+  letter-spacing: $letter-spacing-normal
+  color: $color_primary
+
+.en-caveat 
+  font-family: $font-family-accent

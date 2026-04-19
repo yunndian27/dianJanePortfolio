@@ -1,0 +1,27 @@
+@use '../tokens' as *
+
+.btn-link 
+  background: $color_secondary
+  padding: 15px 40px
+  text-decoration: none
+  color: $color_white
+  border-radius: 40px
+  margin: 10px
+  @include transition(all .5s ease-in-out)
+  &:hover 
+    background: $color_primary
+    color: $color_text_primary
+  @include sm 
+    padding: 15px 80px
+
+.info-link 
+  display: inline-block
+  text-decoration: none
+  color: $color_secondary
+  background-color: $color_white
+  border: 0.063rem solid $color_secondary
+  border-radius: 1.25rem
+  padding: 0.5rem 3.75rem
+  &:hover 
+    color: $color_white
+    background-color: $color_secondary
