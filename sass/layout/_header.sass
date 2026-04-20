@@ -1,0 +1,70 @@
+@use '../tokens' as *
+
+header
+  .container
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column-reverse
+    @include lg
+      flex-direction: row
+  h2, .motto
+    margin-bottom: 1.75rem
+    @include sm
+      margin-bottom: 2.5rem
+    @include lg
+      margin-bottom: 3.75rem
+  .sayHi, .myPic
+    width: 100%
+    @include lg
+      width: 50%
+  .sayHi
+    text-align: center
+    padding: 2.5rem 0
+    @include lg
+      text-align: left
+      padding: 0
+  h2
+    font-size: 1.5rem
+    @include sm
+      font-size: 2rem
+  h3
+    font-size: 1.5rem
+    @include sm
+      font-size: 2.5rem
+    span
+      color: $color_secondary
+  .motto
+    font-size: 1.75rem
+    @include sm
+      font-size: 2.25rem
+  .myPic
+    position: relative
+    display: flex
+    justify-content: center
+    &::after
+      content: ''
+      position: absolute
+      left: 70%
+      top: 50%
+      transform: translate(-50%,-50%)
+      width: 220px
+      height: 220px
+      border-radius: 50%
+      background-color: $color_primary
+      z-index: -1
+      @include sm
+        left: 80%
+        width: 355px
+        height: 355px
+  .btn-group
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  .pic-group
+    position: relative
+    width: 250px
+    @include sm
+      width: 445px
+    img
+      border-radius: 50%

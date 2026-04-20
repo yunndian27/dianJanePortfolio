@@ -1,0 +1,27 @@
+@use '../tokens' as *
+
+/* navbar導覽列 --------------------------------------------------------------------------------------- */ 
+.navbar
+  @include glassmorphism
+  position: fixed
+  top: 0
+  .container
+    padding: 0 1.25rem
+    @include sm
+      padding: 0
+  .navbar-nav
+    .nav-link
+      font-weight:$font-weight-medium
+      color: $color_text_secondary
+      border-bottom: 2px solid rgba($color: $color_secondary, $alpha: 0)
+      margin: 0 $space-sm
+      &:hover
+        color: $color_secondary
+        border-bottom: 2px solid $color_secondary
+      
+      &:active
+        color: $color_secondary
+        border-bottom: 2px solid $color_secondary
+  @include md
+    .navbar-collapse
+      justify-content: flex-end

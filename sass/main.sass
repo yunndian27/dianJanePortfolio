@@ -1,0 +1,14 @@
+// 1. 基礎層 (Base)包含 Reset, Typography, 以及 :root CSS 變數
+@use "base"
+
+// 2. 佈局層 (Layout)定義大架構：Navigation, Grid, Header, Footer
+@use "layout"
+
+// 3. 組件層 (Components)各種獨立 UI 元件：Buttons, Cards, Modals
+@use "components"
+
+// 4. 頁面層 (Pages)針對特定頁面的特殊樣式調整
+@use "pages"
+
+// 5. 工具與覆蓋層 (Utilities / Helpers)最後載入，確保能覆蓋上方的樣式（例如：.u-text-center）
+@use "utilities"

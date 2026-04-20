@@ -1,0 +1,23 @@
+// 使用完整的 @mixin 宣告
+  
+// 快速置中
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+// 現代 Transition
+@mixin transition($prop: all, $time: 0.3s, $ease: ease-in-out)
+  transition: $prop $time $ease
+
+// 圖片覆蓋 (Object-fit)
+@mixin img-cover
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+//毛玻璃效果
+@mixin glassmorphism
+  backdrop-filter: blur(30px)
+  -webkit-backdrop-filter: blur(30px)
+  background-color: rgba(255, 255, 255, 0.3)
