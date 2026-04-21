@@ -1,27 +1,62 @@
 @use '../tokens' as *
 
+.btn
+  display: inline-flex
+  align-items: center
+  font-size: calc( $space-unit * 5 )
+  padding: $space-sm $space-xl
+  border-radius: $space-md
+  border: none
+  gap: $space-xs
+  margin-top: $space-sm
+  @include sm
+    margin-top: none
+
+.material-icons
+  font-size: 1.25rem
+
+.material-symbols-rounded
+  // 控制四個維度：填滿(0/1), 粗細(100-700), 等級(-25-200), 光學尺寸(20-48)
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+  font-size: 24px
+  display: inline-block
+  line-height: 1
+  &:hover
+    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 24
+
+.btn-primary
+  @extend .btn
+  background-color: $color_primary
+  &:hover, &:active
+    background-color: $color_light
+    color: $color_primary
+
+.btn-secondary
+  @extend .btn
+  background-color: $color-white
+  color: $color_primary
+  border: 1px solid $color_secondary
+  &:hover, &:active
+    background-color: $color_light
+    color: $color_secondary
+    border-color: $color_light
+
 .btn-link 
   background: $color_secondary
-  padding: 15px 40px
+  padding: $space-md $space-xl
   text-decoration: none
   color: $color_white
-  border-radius: 40px
-  margin: 10px
+  border-radius: $space-xl
+  margin: $space-md
   @include transition(all .5s ease-in-out)
   &:hover 
     background: $color_primary
     color: $color_text_primary
-  @include sm 
-    padding: 15px 80px
 
-.info-link 
-  display: inline-block
-  text-decoration: none
-  color: $color_secondary
-  background-color: $color_white
-  border: 0.063rem solid $color_secondary
-  border-radius: 1.25rem
-  padding: 0.5rem 3.75rem
-  &:hover 
-    color: $color_white
-    background-color: $color_secondary
+.btn-actions
+  display: flex
+  flex-wrap: wrap
+  gap: $space-sm
+  margin-top: $space-lg
+  @include lg
+    gap: $space-md

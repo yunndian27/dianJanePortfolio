@@ -10,6 +10,7 @@ body
 img 
   width: 100%
 a 
+  text-decoration: none
   @include transition(all .25s ease-in-out)
 
 h1
@@ -17,14 +18,18 @@ h1
   font-weight: $font-weight-bold
   line-height: $line-height-tight
   letter-spacing: $letter-spacing-tight
-  color: $color_secondary
+  color: $color_black
+  @include lg
+    font-size: calc( $font-size-base * 3 )
 
 h2
   font-size: $font-size-h2
   font-weight: $font-weight-medium
   line-height: $line-height-tight
   letter-spacing: $letter-spacing-tight
-  color: $color_black
+  color: $color_black 
+  @include lg
+    font-size: calc( $font-size-base * 2 )
 
 h3
   font-size: $font-size-h3
