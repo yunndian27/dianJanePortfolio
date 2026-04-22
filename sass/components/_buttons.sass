@@ -3,14 +3,17 @@
 .btn
   display: inline-flex
   align-items: center
-  font-size: calc( $space-unit * 5 )
-  padding: $space-sm $space-xl
+  font-size: calc( $font-size-base * 1.125 )
+  padding: $space-sm $space-md
   border-radius: $space-md
   border: none
   gap: $space-xs
   margin-top: $space-sm
   @include sm
     margin-top: none
+  @include md
+    font-size: $font-size-h3
+    padding: $space-sm $space-xl
 
 .material-icons
   font-size: 1.25rem

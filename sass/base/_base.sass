@@ -23,11 +23,13 @@ h1
     font-size: calc( $font-size-base * 3 )
 
 h2
-  font-size: $font-size-h2
+  font-size: $font-size-h3
   font-weight: $font-weight-medium
   line-height: $line-height-tight
   letter-spacing: $letter-spacing-tight
   color: $color_black 
+  @include md
+    font-size: $font-size-h2
   @include lg
     font-size: calc( $font-size-base * 2 )
 
