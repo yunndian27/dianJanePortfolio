@@ -1,14 +1,90 @@
 @use "../tokens" as *
-/* about me ----------------------------- */ 
-.aboutMeWrap
-  h1
-    text-align: center
-    margin-top: 1.5rem
-  .returnBtn
-    font-size: 1.2rem
-    a
-      text-decoration: none
-      padding: 10px 20px
-      background: $color_secondary
-      color: $color_white
-      border-radius: $space-sm
+/* about me ----------------------------- */
+.page-about
+  .hero__container,.skills__container
+    display: flex
+    flex-wrap: wrap
+    gap: $space-md
+  .hero__container
+    flex-wrap: wrap-reverse
+    @include lg
+      align-items: center
+      flex-wrap: wrap
+  .hero__content
+    width: 100%
+    @include lg
+      width: 60%
+  .hero__media
+    width: 100%
+    @include lg
+      width: calc( 40% - $space-md )
+  .hero__img
+    border-radius: $space-md
+
+  .skills, .career, .education
+    background: $color_bg
+  .skills__title, .career__title, .education__title
+    span
+      font-family: $font-family-accent
+      font-weight: $font-weight-bold
+      margin-left: $space-2
+
+  .skills__group
+    width: 100%
+    @include lg
+      width: calc( 50% - $space-md )
+  .skills__list
+    margin-top: $space-5
+  .skills__list--tags
+    display: flex
+    flex-wrap: wrap
+    gap: $space-md $space-sm
+    .skills__item
+      background: $color_white
+      padding: $space-sm $space-md
+      border: 1px solid $color_text_light
+      border-radius: $space-xs
+  .skills__list--bullets
+    gap: $space-2
+    .skills__item
+      list-style: disc
+      margin-left: $space-4
+
+  .career__list
+    margin-top: $space-5
+  .job-item
+    display: flex
+    flex-wrap: wrap
+    gap: $space-4
+    margin-bottom: calc( $space-5 * 2 )
+    p
+      margin-bottom: $space-1
+  .job-item__info
+    width: 100%
+    @include lg
+      width: 30%
+  .job-item__main
+    width: 100%
+    padding-left: $space-5
+    border-left: 1.5px solid $color_light
+    @include lg
+      width: calc( 70% - $space-5 )
+  .job-item__date
+    color: $color_text_tertiary
+  .project-summary
+    margin-top: $space-2
+  .project-summary__title
+    font-size: $font-size-base
+    font-weight: $font-weight-bold
+  .project-summary__item
+    list-style: disc
+    margin-left: $space-5
+
+  .education__list
+    display: flex
+    flex-wrap: wrap
+  .education__item
+    width: 100%
+    @include lg
+      width: calc( 50% - $space-md )
+      margin-right: $space-md

@@ -119,7 +119,7 @@ h3 {
 }
 
 .en-caveat {
-  font-family: "Caveat", cursive;
+  font-family: "Times New Roman", sans-serif;
 }
 
 main {
@@ -400,19 +400,148 @@ main {
 }
 
 /* about me ----------------------------- */
-.aboutMeWrap h1 {
-  text-align: center;
-  margin-top: 1.5rem;
+.page-about .hero__container, .page-about .skills__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
 }
-.aboutMeWrap .returnBtn {
-  font-size: 1.2rem;
+.page-about .hero__container {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
 }
-.aboutMeWrap .returnBtn a {
-  text-decoration: none;
-  padding: 10px 20px;
-  background: #3F43A6;
-  color: #ffffff;
-  border-radius: 8px;
+@media (min-width: 992px) {
+  .page-about .hero__container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.page-about .hero__content {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .page-about .hero__content {
+    width: 60%;
+  }
+}
+.page-about .hero__media {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .page-about .hero__media {
+    width: calc(40% - 16px);
+  }
+}
+.page-about .hero__img {
+  border-radius: 16px;
+}
+.page-about .skills, .page-about .career, .page-about .education {
+  background: #FBFBFF;
+}
+.page-about .skills__title span, .page-about .career__title span, .page-about .education__title span {
+  font-family: "Times New Roman", sans-serif;
+  font-weight: 700;
+  margin-left: 8px;
+}
+.page-about .skills__group {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .page-about .skills__group {
+    width: calc(50% - 16px);
+  }
+}
+.page-about .skills__list {
+  margin-top: 20px;
+}
+.page-about .skills__list--tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px 8px;
+}
+.page-about .skills__list--tags .skills__item {
+  background: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid #D2D2D2;
+  border-radius: 4px;
+}
+.page-about .skills__list--bullets {
+  gap: 8px;
+}
+.page-about .skills__list--bullets .skills__item {
+  list-style: disc;
+  margin-left: 16px;
+}
+.page-about .career__list {
+  margin-top: 20px;
+}
+.page-about .job-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.page-about .job-item p {
+  margin-bottom: 4px;
+}
+.page-about .job-item__info {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .page-about .job-item__info {
+    width: 30%;
+  }
+}
+.page-about .job-item__main {
+  width: 100%;
+  padding-left: 20px;
+  border-left: 1.5px solid #DFE4EE;
+}
+@media (min-width: 992px) {
+  .page-about .job-item__main {
+    width: calc(70% - 20px);
+  }
+}
+.page-about .job-item__date {
+  color: #9D9D9C;
+}
+.page-about .project-summary {
+  margin-top: 8px;
+}
+.page-about .project-summary__title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.page-about .project-summary__item {
+  list-style: disc;
+  margin-left: 20px;
+}
+.page-about .education__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.page-about .education__item {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .page-about .education__item {
+    width: calc(50% - 16px);
+    margin-right: 16px;
+  }
 }
 
 .u-backdrop-blur {
