@@ -1,4 +1,5 @@
 @use '../tokens' as *
+@use '../helpers' as *
 
 /* navbar導覽列 --------------------------------------------------------------------------------------- */ 
 .navbar
@@ -13,10 +14,15 @@
     display: flex
     align-items: center
     gap: $space-sm
-  .navbar-h3
+  .navbar-name
+    font-family: $font-family-accent
     line-height: $line-height-none
     font-weight: $font-weight-medium
     margin-bottom: 0
+    color: $color_primary
+    font-size: $space-6
+    &:hover
+      color: $color_secondary
   .navbar-nav
     .nav-link
       font-weight:$font-weight-medium

@@ -1,3 +1,4 @@
+@use '../tokens' as *
 // 使用完整的 @mixin 宣告
   
 // 快速置中
@@ -21,3 +22,10 @@
   backdrop-filter: blur(30px)
   -webkit-backdrop-filter: blur(30px)
   background-color: rgba(255, 255, 255, 0.3)
+
+// 英文字體-粗
+// 括號拿掉，它就會直接從全域尋找這些變數
+@mixin font-accent-bold
+  font-family: $font-family-accent
+  font-weight: $font-weight-bold
+  line-height: $line-height-none

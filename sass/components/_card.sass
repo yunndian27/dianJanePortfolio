@@ -1,4 +1,5 @@
 @use '../tokens' as *
+@use '../helpers' as *
 
 .card-work
   margin: $space-12 0
@@ -15,3 +16,6 @@
   .work-actions
     display: flex
     gap: $space-md
+
+  .work-tag
+    @include font-accent-bold
