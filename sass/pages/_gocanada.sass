@@ -1,4 +1,103 @@
 @use "../tokens" as *
+@use '../helpers' as *
+
+.page-case
+  .case-hero__container, .case-intro__block
+    @include flex-wrap
+  .case-hero__container
+    flex-wrap: wrap-reverse
+    @include lg
+      flex-wrap: wrap
+  .case-hero__content, .case-intro__title, .case-intro__subtitle
+    width: 100%
+    @include lg
+      width: 30%
+  .case-hero__media, .case-intro__info, .case-impact__list
+    width: 100%
+    @include lg
+      width: calc( 70% - $space-5 )
+  .case-hero__img
+    border-radius: $space-5
+  .case-hero__content
+    @include flex-wrap
+    align-content: space-between
+  .case-meta__label
+    font-weight: $font-weight-regular
+    color: $color_text_tertiary
+  .case-meta__value
+    font-weight: $font-weight-medium
+  .case-intro__container
+    @include lg
+      padding: 0 0 calc( $space-1 * 10 ) 0
+  .case-intro__title
+    font-size: $font-size-h2
+    font-weight: $font-weight-bold
+    color: $color_primary
+  .case-intro__subtitle
+    font-size: calc( $font-size-base * 1.125 )
+    color: $color_text_primary
+  .case-goal
+    background-color: rgba($color_light , .3 )
+    border-left: 3px solid $color_secondary
+    border-radius: 0 $space-5 $space-5 0
+    padding: $space-4 $space-5
+    margin-top: $space-5
+    p
+      margin-bottom: 0
 
 .page-gocanada
-  
+  .case-section__title
+    font-size: $font-size-h2
+    font-weight: $font-weight-bold
+    color: $color_primary
+  .case-section__subtitle
+    font-size: calc( $font-size-base * 1.125 )
+    font-weight: $font-weight-medium
+    color: $color_text_tertiary
+  .case-problem__list
+    @include flex-wrap
+    justify-content: center
+  .case-problem__item
+    text-align: center
+    width: 100%
+    @include lg
+      width: calc( 100% / 3 - $space-5 )
+  .case-item__title
+    font-size: calc( $font-size-base * 1.125  )
+    font-weight: $font-weight-bold
+    margin-top: $space-3
+  .case-itme__text
+    color: $color_text_secondary
+  .case-problem__img
+    border-radius: $space-5
+  .case-problem__block
+    @include flex-wrap
+    margin-top: $space-5
+    .case-section__title
+      width: 100%
+      @include lg
+        width: 30%
+    .case-section__list
+      width: 100%
+      @include lg
+        width: calc( 70% - $space-5 )
+    .case-product__item
+      margin-left: $space-5
+      list-style: disc
+  .case-key
+    .case-section__title
+      text-align: center
+  .case-key__block
+    margin-top: calc( $space-5 * 2 )
+  .case-key__list
+    @include flex-wrap
+  .case-key__item
+    width: 100%
+    text-align: center
+    color: $color_text_secondary
+    @include lg
+      width: calc( 100% / 3 - $space-5 )
+  .case-key__img
+    border-radius: $space-5
+  .case-key__text
+    margin: $space-5 0
