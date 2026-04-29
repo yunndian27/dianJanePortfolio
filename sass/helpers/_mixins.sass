@@ -10,7 +10,9 @@
 @mixin flex-wrap
   display: flex
   flex-wrap: wrap
-  gap: $space-5
+  gap: $space-3
+  @include lg
+    gap: $space-5
 
 // 現代 Transition
 @mixin transition($prop: all, $time: 0.3s, $ease: ease-in-out)
@@ -19,14 +21,14 @@
 // 圖片覆蓋 (Object-fit)
 @mixin img-cover
   width: 100%
-  height: 100%
+  height: auto
   object-fit: cover
 
 //毛玻璃效果
 @mixin glassmorphism
   backdrop-filter: blur(30px)
   -webkit-backdrop-filter: blur(30px)
-  background-color: rgba(255, 255, 255, 0.3)
+  background-color: rgba(255, 255, 255, 0.38)
 
 // 英文字體-粗
 // 括號拿掉，它就會直接從全域尋找這些變數

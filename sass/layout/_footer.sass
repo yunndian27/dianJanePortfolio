@@ -1,7 +1,9 @@
 @use '../tokens' as *
 
 .footer
-  margin-bottom: calc( $space-unit * 20 )
+  margin-bottom: calc( $space-1 * 10 )
+  @include lg
+    margin-bottom: calc( $space-1 * 20 )
   p
     color: $color_text_tertiary
   .footer-subtitle
