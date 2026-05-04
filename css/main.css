@@ -48,7 +48,7 @@ ul {
 
 :root {
   --color-primary: #32368A;
-  --color-bg: #F3F3FF;
+  --color-bg: #FBFBFF;
   --color-text: #333333;
   --font-size-base: 16px;
   --font-size-h1: 31.25px;
@@ -428,7 +428,7 @@ main {
 }
 
 .page-home .section-work, .page-home .section-others {
-  background: #F3F3FF;
+  background: #FBFBFF;
 }
 .page-home .section--subtitle {
   font-family: "Times New Roman", sans-serif;
@@ -469,7 +469,7 @@ main {
 }
 @media (min-width: 992px) {
   .page-about .hero__content {
-    width: 60%;
+    width: 55%;
   }
 }
 .page-about .hero__media {
@@ -477,14 +477,14 @@ main {
 }
 @media (min-width: 992px) {
   .page-about .hero__media {
-    width: calc(40% - 16px);
+    width: calc(45% - 16px);
   }
 }
 .page-about .hero__img {
   border-radius: 16px;
 }
 .page-about .skills, .page-about .career, .page-about .education {
-  background: #F3F3FF;
+  background: #FBFBFF;
 }
 .page-about .skills__title span, .page-about .career__title span, .page-about .education__title span {
   font-family: "Times New Roman", sans-serif;
@@ -687,7 +687,7 @@ main {
 }
 
 .page-gocanada section {
-  background: #F3F3FF;
+  background: #FBFBFF;
 }
 .page-gocanada section:nth-child(2) {
   background: #ffffff;
@@ -1061,6 +1061,47 @@ main {
 }
 .page-gocanada .case-final__img {
   border-radius: 20px;
+}
+
+.page-gov section {
+  background: #FBFBFF;
+}
+.page-gov section:nth-child(2) {
+  background: #ffffff;
+}
+.page-gov .case-hero__title small {
+  font-weight: 400;
+}
+.page-gov .case-problem__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px;
+}
+@media (min-width: 992px) {
+  .page-gov .case-problem__list {
+    gap: 20px;
+  }
+}
+.page-gov .case-problem__list {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.page-gov .case-problem__item {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .page-gov .case-problem__item {
+    width: calc(50% - 12px);
+  }
+}
+@media (min-width: 992px) {
+  .page-gov .case-problem__item {
+    width: calc(33.3333333333% - 20px);
+  }
 }
 
 .u-backdrop-blur {
