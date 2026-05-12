@@ -2,19 +2,7 @@
 @use '../helpers' as *
   
 .page-gov
-  section
-    background: $color_bg
-    &:nth-child(2)
-      background: $color_white
   .case-hero__title small
     font-weight: $font-weight-regular
-  .case-problem__list
-    @include flex-wrap
-    justify-content: space-around
-  .case-problem__item
-    width: 100%
-    text-align: center
-    @include md
-      width: calc( 100% / 2 - $space-3 )
-    @include lg
-      width: calc( 100% / 3 - $space-5 )
+  .case-key__img
+    margin-bottom: $space-5

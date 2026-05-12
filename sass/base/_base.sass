@@ -3,7 +3,7 @@
   
 body
   font-family: $font-family-primary
-  font-size: $font-size-base
+  font-size: $font-size-body-m
   font-weight: $font-weight-regular
   line-height: $line-height-base
   letter-spacing: $letter-spacing-normal
@@ -14,35 +14,27 @@ img
 a 
   text-decoration: none
   @include transition(all .25s ease-in-out)
+  color: $color-primary
+  &:hover
+    color: $color-secondary
 
 h1
-  font-size: $font-size-h1
-  font-weight: $font-weight-bold
-  line-height: $line-height-tight
+  +text-h1
   letter-spacing: $letter-spacing-tight
-  color: $color_black
-  @include lg
-    font-size: calc( $font-size-base * 3 )
+  // color: $color_black
 
 h2
-  font-size: $font-size-h3
-  font-weight: $font-weight-medium
-  line-height: $line-height-tight
+  +text-h2
   letter-spacing: $letter-spacing-tight
-  color: $color_black 
-  @include md
-    font-size: $font-size-h2
-  @include lg
-    font-size: calc( $font-size-base * 2 )
+  // color: $color_black
 
 h3
-  font-size: calc( $font-size-base * 1.125 )
-  font-weight: $font-weight-bold
-  line-height: $line-height-base
+  +text-h3
   letter-spacing: $letter-spacing-normal
-  color: $color_primary
-  @include lg
-    font-size: $font-size-h3
+  // color: $color_primary
+
+h4
+  +text-h4
 
 .en-accent 
   font-family: $font-family-accent
