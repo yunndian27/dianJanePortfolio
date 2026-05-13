@@ -69,6 +69,8 @@
     border-left: 1.5px solid $color_light
     @include lg
       width: calc( 70% - $space-5 )
+  .job-item__role
+    color: $color-primary
   .job-item__date
     color: $color_text_tertiary
   .project-summary
@@ -83,8 +85,11 @@
   .education__list
     display: flex
     flex-wrap: wrap
+    margin-top: $space-5
   .education__item
     width: 100%
     @include lg
       width: calc( 50% - $space-md )
       margin-right: $space-md
+  .education__school
+    color: $color-primary

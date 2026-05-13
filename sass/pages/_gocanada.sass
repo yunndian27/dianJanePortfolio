@@ -17,8 +17,10 @@
       flex-wrap: wrap
   .case-hero__content, .case-intro__title, .case-intro__subtitle
     width: 100%
+    margin-top: $space-5
     @include lg
       width: 30%
+      margin-top: 0
   .case-hero__media, .case-intro__info, .case-intro__list
     width: 100%
     @include lg
@@ -91,21 +93,18 @@
     width: 100%
     @include lg
       width: 50%
-  .case-block__img
-    border-radius: $space-5
-  .case-key__list
-    @include flex-wrap
-    justify-content: center
-  .case-key__item
+  .case-block__col
     width: 100%
-    // text-align: center
-    color: $color_text_secondary
+    margin-top: $space-3
     @include md
       width: calc( 100% / 2 - $space-5 )
-    @include lg
-      width: calc( 100% / 3 - $space-5 )
-  .case-key__text
-    margin: $space-5 0
+      margin-top: 0
+  .case-block__img
+    border-radius: $space-3
+    @include md
+      border-radius: $space-5
+  li::marker
+    color: $color-secondary
 
 .page-gocanada
   .case-itme__text
@@ -125,6 +124,19 @@
   .case-key
     .case-section__title
       text-align: center
+  .case-key__list
+    @include flex-wrap
+    justify-content: center
+  .case-key__item
+    width: 100%
+    // text-align: center
+    color: $color_text_secondary
+    @include md
+      width: calc( 100% / 2 - $space-5 )
+    @include lg
+      width: calc( 100% / 3 - $space-5 )
+  .case-key__text
+    margin: $space-5 0
   .case-key__item
     text-align: center
   .case-strategy__list
@@ -206,7 +218,7 @@
     margin-top: $space-3
     @include lg
       margin-top: $space-5
-  .case-reflection__itme
+  .case-reflection__item
     list-style: disc
   .case-final
     .case-section__block

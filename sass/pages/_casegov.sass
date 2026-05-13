@@ -4,5 +4,42 @@
 .page-gov
   .case-hero__title small
     font-weight: $font-weight-regular
-  .case-key__img
-    margin-bottom: $space-5
+  .case-key__list, .case-strategy__list
+    @include flex-wrap
+    justify-content: center
+  .case-key__item
+    width: 100%
+    // text-align: center
+    color: $color_text_secondary
+    @include md
+      width: calc( 100% / 2 - $space-5 )
+    @include lg
+      width: calc( 100% / 3 - $space-5 )
+  .case-key__mark
+    margin-top: $space-3
+    @include md
+      margin-top: $space-5
+  .case-strategy__item
+    width: 100%
+    @include md
+      width: calc( 100% / 2 - $space-5 )
+    &:nth-child(3)
+      width: 100%
+      margin-top: $space-5
+      .case-strategy__group
+        +flex-wrap
+      .case-block__img
+        width: 100%
+        @include md
+          width: calc( 100% / 2 - $space-5 )
+  .case-reflection
+    .case-section__block
+      +flex-wrap
+      align-items: center
+      justify-content: space-between
+      &:nth-child(odd)
+        flex-direction: row-reverse
+  .case-reflection__item
+    list-style: disc
+    margin-left: $space-5
+    
