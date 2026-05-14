@@ -67,6 +67,7 @@ body {
   line-height: 1.6;
   letter-spacing: 0;
   color: #333333;
+  cursor: url("../images/jane/cursor.svg"), pointer;
 }
 
 img {
@@ -84,7 +85,7 @@ a {
 }
 a:hover {
   color: #3F43A6;
-  cursor: url("../images/jane/cursor.png"), pointer;
+  cursor: url("../images/jane/cursor_star.svg"), pointer;
 }
 
 h1 {
@@ -236,7 +237,12 @@ main {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 16px;
+  gap: 8px;
+}
+@media (min-width: 992px) {
+  .hero-title {
+    gap: 16px;
+  }
 }
 
 .hero-name {
@@ -244,12 +250,12 @@ main {
 }
 
 .hero-avatar {
-  width: 40px;
+  width: 3rem;
   border-radius: 32px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .hero-avatar {
-    width: 60px;
+    width: 4rem;
   }
 }
 
@@ -1105,6 +1111,9 @@ main {
 .page-gocanada .case-final .case-section__block {
   text-align: center;
   margin-top: 20px;
+}
+.page-gocanada .case-final {
+  display: none;
 }
 
 .page-gov .case-hero__title small {

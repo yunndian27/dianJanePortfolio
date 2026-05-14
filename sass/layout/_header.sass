@@ -4,14 +4,16 @@
   display: flex
   align-items: center
   flex-wrap: wrap
-  gap: $space-4
+  gap: $space-sm
+  @include lg
+    gap: $space-4
 .hero-name
   color: $color-primary
 .hero-avatar
-  width: calc( $space-unit * 10 )
+  width: 3rem
   border-radius: $space-xl
-  @include lg
-    width: calc( $space-unit * 15 )
+  @include md
+    width: 4rem
 .hero-highlight
   position: relative
   &::after
