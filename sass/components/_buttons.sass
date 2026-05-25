@@ -10,11 +10,14 @@
   border: none
   gap: $space-xs
   margin-top: $space-sm
+  @include transition(all .3s ease)
   @include sm
     margin-top: none
   @include md
     font-size: $font-size-h3
     padding: $space-sm $space-xl
+  &:hover
+    transform: translateY(-2px)
 
 .material-icons
   font-size: 1.25rem

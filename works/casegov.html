@@ -45,7 +45,7 @@
     <main class="page-case page-gov">
     
     <!-- header -->
-    <header class="case-hero">
+    <header class="case-hero scroll-reveal">
       <div class="container case-hero__container">
         <div class="case-hero__content">
           <h1 class="case-hero__title">
@@ -79,7 +79,7 @@
     <!-- case intro -->
     <section class="case-intro">
       <div class="container case-intro__container">
-        <div class="case-intro__block">
+        <div class="case-intro__block scroll-reveal">
           <h2 class="case-intro__title">專案背景</h2>
           <div class="case-intro__info">
             <p class="case-intro__text">民眾與機關負責人，常面臨資訊分散、分類不貼近需求與品牌形象不合等問題，導致網站使用率不高。我希望透過結構化與設計重整網站，協助使用者更快速找到理想資訊。</p>
@@ -95,8 +95,8 @@
     <!-- the problem -->
     <section class="case-problem">
       <div class="container case-proble__container">
-        <h3 class="case-section__subtitle">Problem｜問題定義</h3>
-        <div class="case-section__block case-problem__block">
+        <h3 class="case-section__subtitle scroll-reveal">Problem｜問題定義</h3>
+        <div class="case-section__block case-problem__block scroll-reveal">
           <h2 class="case-section__title">網站痛點</h2>
           <ul class="case-problem__list">
             <li class="case-problem__item">
@@ -136,12 +136,12 @@
     <!-- key insights -->
     <section class="case-key">
       <div class="container case-key__container">
-        <h3 class="case-section__subtitle">Key Insights｜關鍵洞察</h3>
-        <div class="case-section__block">
+        <h3 class="case-section__subtitle scroll-reveal">Key Insights｜關鍵洞察</h3>
+        <div class="case-section__block scroll-reveal">
           <h2 class="case-section__title">洞察舊網站存在的核心問題</h2>
           <p class="case-section__text">針對舊網站營運面對的問題，收集資料與實際操作後，將專案核心集中為梳理資訊架構（IA）、增加報名流程、品牌形象朔造。</p>
         </div>
-        <div class="case-section__block">
+        <div class="case-section__block scroll-reveal">
           <!-- <h2 class="case-section__title">洞察/設計機會</h2> -->
           <ul class="case-key__list">
             <li class="case-key__item">
@@ -172,12 +172,12 @@
     <!-- Design Strategy -->
     <section class="case-strategy">
       <div class="container case-strategy__container">
-        <h3 class="case-section__subtitle">Solution Overview｜決策概述</h3>
-        <div class="case-section__block">
+        <h3 class="case-section__subtitle scroll-reveal">Solution Overview｜決策概述</h3>
+        <div class="case-section__block scroll-reveal">
           <h2 class="case-section__title">設計上優先確保資訊清晰傳達，而非視覺裝飾</h2>
           <p class="case-section__text">在視覺設計上，評估延續前位設計師的風格與重新建立視覺系統方向，最終選擇後者，以確保整體資訊層級與首頁風格一致。</p>
         </div>
-        <div class="case-section__block">
+        <div class="case-section__block scroll-reveal">
           <ul class="case-strategy__list">
             <li class="case-strategy__item">
               <div class="case-strategy__group">
@@ -202,7 +202,7 @@
             </li>
           </ul>
         </div>
-        <div class="case-section__block">
+        <div class="case-section__block scroll-reveal">
           <aside class="case-goal">
             <p>🔍 <strong>核心洞察：</strong> 「明確的引導」比「大量資訊」更能幫助民眾找到資料。</p>
           </aside>
@@ -212,8 +212,8 @@
     <!-- Reflection -->
     <section class="case-reflection">
       <div class="container case-reflection__container">
-        <h3 class="case-section__subtitle">Impact & Learnings｜成果與反思</h3>
-        <div class="case-section__block">
+        <h3 class="case-section__subtitle scroll-reveal">Impact & Learnings｜成果與反思</h3>
+        <div class="case-section__block scroll-reveal">
           <div class="case-block__col">
             <h2 class="case-section__title">成果與影響</h2>
             <ul class="case-reflection__list">
@@ -225,7 +225,7 @@
             <img src="../images/works/gov/gov-impact-01.jpg" alt="" class="case-block__img">
           </div>
         </div>
-        <div class="case-section__block">
+        <div class="case-section__block scroll-reveal">
           <div class="case-block__col">
             <h2 class="case-section__title">專案的反思</h2>
             <ul class="case-reflection__list">
@@ -244,7 +244,7 @@
     </main>
 
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer scroll-reveal">
       <div class="container">
         <address class="contact-section">
           <h2 class="footer-title">
@@ -275,7 +275,9 @@
 
   <!-- vendor -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <!-- customized -->
-  <script></script>
+  <script src="../js/animation.js" type="text/javascript"></script>
 </body>
 </html>

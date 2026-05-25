@@ -1,4 +1,6 @@
 @use "../tokens" as *
+@use '../helpers' as *
+
 /* about me ----------------------------- */
 .page-about
   .hero__container,.skills__container
@@ -44,7 +46,11 @@
       padding: $space-sm $space-md
       border: 1px solid $color_text_light
       border-radius: $space-xs
-  .skills__list--bullets
+      @include transition(all .3s ease)
+      &:hover
+        background: $color_light
+        color: $color_secondary
+        border-color: $color_secondary
     gap: $space-2
     .skills__item
       list-style: disc

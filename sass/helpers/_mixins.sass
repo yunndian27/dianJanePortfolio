@@ -15,8 +15,8 @@
     gap: $space-5
 
 // 現代 Transition
-@mixin transition($prop: all, $time: 0.3s, $ease: ease-in-out)
-  transition: $prop $time $ease
+@mixin transition($args...)
+  transition: $args
 
 // 圖片覆蓋 (Object-fit)
 @mixin img-cover
