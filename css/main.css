@@ -579,10 +579,10 @@ main {
   color: #3F43A6;
   border-color: #3F43A6;
 }
-.page-about .skills__list--tags {
+.page-about .skills__list--bullets {
   gap: 8px;
 }
-.page-about .skills__list--tags .skills__item {
+.page-about .skills__list--bullets .skills__item {
   list-style: disc;
   margin-left: 16px;
 }

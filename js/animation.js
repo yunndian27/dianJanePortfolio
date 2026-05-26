@@ -11,12 +11,12 @@ revealElements.forEach((element) => {
     gsap.to(element, {
         opacity: 1,
         y: 0,
-        duration: 0.9, // 介於 0.8~1s 之間的黃金比例
+        duration: 0.8,
         ease: "power1.out",
         scrollTrigger: {
-            trigger: element,       // 以「當前這一個」元件作為觸發點
-            start: "top 85%",       // 當該元件接近螢幕底部時觸發
-            toggleActions: "play none none none"
+            trigger: element,
+            start: "top 85%",
+            toggleActions: "play reverse play reverse"
         }
     });
 });
