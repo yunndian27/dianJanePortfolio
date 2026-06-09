@@ -16,7 +16,7 @@ revealElements.forEach((element) => {
         scrollTrigger: {
             trigger: element,
             start: "top 85%",
-            toggleActions: "play reverse play reverse"
+            toggleActions: "play reverse restart reset"
         }
     });
 });
