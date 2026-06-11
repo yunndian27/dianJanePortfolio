@@ -16,7 +16,14 @@ revealElements.forEach((element) => {
         scrollTrigger: {
             trigger: element,
             start: "top 85%",
-            toggleActions: "play reverse restart reset"
+            toggleActions: "play none none none"
         }
     });
+});
+
+// 2. 初始化 GLightbox (它會自動去認畫面上所有 class="glightbox" 的超連結)
+const lightbox = GLightbox({
+  selector: '.glightbox',
+  loop: true,               // 燈箱滑到最後一張時可以循環回第一張
+  closeOnOutsideClick: true, // 點擊旁邊黑底也可以關閉 (貼心 UX)
 });

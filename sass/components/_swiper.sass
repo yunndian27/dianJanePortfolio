@@ -1,29 +1,63 @@
 @use '../tokens' as *
+@use '../helpers' as *
 
 .otherSwiper
   width: 100%
   height: 100%
   --swiper-pagination-color: #{$color_primary}
-
-.swiper-slide
-  padding-bottom: $space-xl
-
-.swiper-img
-  border-radius: $space-md
-
-.swiper-info
-  display: flex
-  justify-content: space-between
-  align-items: center
-
-.swiper-tag
-  font-family: $font-family-accent
-  font-weight: $font-weight-medium
-  color: $color_text_tertiary
-
-.swiper-title
-  font-size: $font-size-body-m
-  font-weight: $font-weight-medium
-  line-height: $line-height-tight
-  letter-spacing: $letter-spacing-normal
-  color: $color_text_primary
+  @include lg
+    overflow: visible
+  .swiper-wrapper
+    @include lg
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      grid-gap: $space-lg
+      transform: none !important
+  .swiper-slide
+    position: relative
+    overflow: hidden
+    border-radius: $space-md
+    @include transition(all .3s ease)
+    padding-bottom: $space-xl
+    @include lg
+      // background: $color_text_primary
+      width: 100% !important
+      margin-right: 0 !important
+      padding-bottom: 0
+    .gallery-thumb
+      aspect-ratio: 4 / 3
+      overflow: hidden
+      border-radius: $space-4
+    .swiper-img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      // border-radius: $space-md
+      opacity: 1
+      transition: transform .4s ease
+    .swiper-info
+      position: absolute
+      inset: 0
+      background: rgba($color_black, .7 )
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      padding: $space-4
+      opacity: 0
+      transition: opacity .3s ease
+    .swiper-tag
+      font-family: $font-family-accent
+      font-weight: $font-weight-medium
+      color: $color_white
+    .swiper-title
+      font-size: $font-size-body-m
+      font-weight: $font-weight-medium
+      line-height: $line-height-tight
+      letter-spacing: $letter-spacing-normal
+      color: $color_white
+    
+    &:hover
+      .swiper-img
+        transform: scale(1.03)
+      .swiper-info
+        opacity: 1
