@@ -1,19 +1,19 @@
-let otherSwiper = undefined;
+let visualSwiper = undefined;
 
 function initSwiper() {
   const screenWidth = window.innerWidth;
 
   // 電腦版 (假設 1024px 以上)：銷毀 Swiper，還原為靜態網格
   if (screenWidth >= 1024) {
-    if (otherSwiper !== undefined) {
-      otherSwiper.destroy(true, true); // 參數 true 代表清除 Swiper 注入的行內樣式
-      otherSwiper = undefined;
+    if (visualSwiper !== undefined) {
+      visualSwiper.destroy(true, true); // 參數 true 代表清除 Swiper 注入的行內樣式
+      visualSwiper = undefined;
     }
   } 
   // 平板與手機 (1023px 以下)：初始化 Swiper
   else {
-    if (otherSwiper === undefined) {
-      otherSwiper = new Swiper('.otherSwiper', {
+    if (visualSwiper === undefined) {
+      visualSwiper = new Swiper('.visualSwiper', {
         loop: true,
         autoplay: {
           delay: 3000,
@@ -46,7 +46,7 @@ window.addEventListener('load', initSwiper);
 // 2. 監聽視窗縮放 (加入簡單的防抖或直接監聽)
 window.addEventListener('resize', initSwiper);
 
-// var swiper = new Swiper(".otherSwiper", {
+// var swiper = new Swiper(".visualSwiper", {
 //   slidesPerView: 1,
 //   spaceBetween: 10,
 //   lazy: true,

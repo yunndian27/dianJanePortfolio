@@ -198,6 +198,10 @@ main {
           align-items: center;
   gap: 8px;
 }
+.navbar .navbar-brand:hover img {
+  -webkit-filter: invert(57%) sepia(87%) saturate(735%) hue-rotate(345deg) brightness(98%) contrast(92%);
+          filter: invert(57%) sepia(87%) saturate(735%) hue-rotate(345deg) brightness(98%) contrast(92%);
+}
 .navbar .navbar-name {
   font-family: "Times New Roman", sans-serif;
   line-height: 1;
@@ -207,7 +211,7 @@ main {
   font-size: 24px;
 }
 .navbar .navbar-name:hover {
-  color: #3F43A6;
+  color: #EA8F33;
 }
 .navbar .navbar-nav .nav-link {
   font-weight: 500;
@@ -270,6 +274,7 @@ main {
 
 .hero-highlight {
   position: relative;
+  color: #32368A;
 }
 .hero-highlight::after {
   content: "";
@@ -278,7 +283,8 @@ main {
   left: 0;
   width: 100%;
   height: 12px;
-  background: rgba(63, 67, 166, 0.3);
+  background: rgba(234, 143, 51, 0.3);
+  z-index: -1;
 }
 
 .footer {
@@ -355,12 +361,12 @@ main {
 .btn-secondary {
   background-color: #ffffff;
   color: #32368A;
-  border: 1px solid #3F43A6;
+  border: 2px solid #32368A;
 }
 .btn-secondary:hover, .btn-secondary:active {
-  background-color: #DFE4EE;
-  color: #3F43A6;
-  border-color: #DFE4EE;
+  background-color: rgba(234, 143, 51, 0.1);
+  color: #EA8F33;
+  border-color: #EA8F33;
 }
 
 .btn-link {
@@ -443,18 +449,18 @@ main {
           transform: scale(1.03);
 }
 
-.otherSwiper {
+.visualSwiper {
   width: 100%;
   height: 100%;
   --swiper-pagination-color: #32368A;
 }
 @media (min-width: 992px) {
-  .otherSwiper {
+  .visualSwiper {
     overflow: visible;
   }
 }
 @media (min-width: 992px) {
-  .otherSwiper .swiper-wrapper {
+  .visualSwiper .swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 24px;
@@ -462,7 +468,7 @@ main {
             transform: none !important;
   }
 }
-.otherSwiper .swiper-slide {
+.visualSwiper .swiper-slide {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
@@ -471,18 +477,18 @@ main {
   padding-bottom: 32px;
 }
 @media (min-width: 992px) {
-  .otherSwiper .swiper-slide {
+  .visualSwiper .swiper-slide {
     width: 100% !important;
     margin-right: 0 !important;
     padding-bottom: 0;
   }
 }
-.otherSwiper .swiper-slide .gallery-thumb {
+.visualSwiper .swiper-slide .gallery-thumb {
   aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 16px;
 }
-.otherSwiper .swiper-slide .swiper-img {
+.visualSwiper .swiper-slide .swiper-img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -493,7 +499,7 @@ main {
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
-.otherSwiper .swiper-slide .swiper-info {
+.visualSwiper .swiper-slide .swiper-info {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
@@ -512,27 +518,27 @@ main {
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.otherSwiper .swiper-slide .swiper-tag {
+.visualSwiper .swiper-slide .swiper-tag {
   font-family: "Times New Roman", sans-serif;
   font-weight: 500;
   color: #ffffff;
 }
-.otherSwiper .swiper-slide .swiper-title {
+.visualSwiper .swiper-slide .swiper-title {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0;
   color: #ffffff;
 }
-.otherSwiper .swiper-slide:hover .swiper-img {
+.visualSwiper .swiper-slide:hover .swiper-img {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
 }
-.otherSwiper .swiper-slide:hover .swiper-info {
+.visualSwiper .swiper-slide:hover .swiper-info {
   opacity: 1;
 }
 
-.page-home .section-work, .page-home .section-others {
+.page-home .section-work, .page-home .section-visual {
   background: #FBFBFF;
 }
 .page-home .section--subtitle {
@@ -546,23 +552,26 @@ main {
 .page-home .work-info {
   margin-top: 12px;
 }
-.page-home .section-others h2 {
+.page-home .section-visual h2 {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  .page-home .section-others h2 {
+  .page-home .section-visual h2 {
     margin-bottom: 32px;
   }
 }
 @media (min-width: 992px) {
-  .page-home .section-others h2 {
+  .page-home .section-visual h2 {
     margin-bottom: 48px;
   }
 }
-.page-home .section-others .others-btns-wrap {
+.page-home .section-visual .visual-btns-wrap {
   margin: 32px auto;
   text-align: center;
   display: none;
+}
+.page-home .visual-list {
+  margin-bottom: 20px;
 }
 
 /* about me ----------------------------- */

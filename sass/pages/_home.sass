@@ -1,7 +1,7 @@
 @use "../tokens" as *
 
 .page-home  
-  .section-work, .section-others
+  .section-work, .section-visual
     background: $color_bg
   .section--subtitle
     font-family: $font-family-accent
@@ -11,14 +11,16 @@
     border-radius: $space-5
   .work-info
     margin-top: $space-3
-  .section-others
+  .section-visual
     h2
       margin-bottom: $space-5
       @include md
         margin-bottom: $space-8
       @include lg
         margin-bottom: $space-12
-    .others-btns-wrap
+    .visual-btns-wrap
       margin: $space-8 auto
       text-align: center
       display: none
+  .visual-list
+    margin-bottom: $space-5

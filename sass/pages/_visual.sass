@@ -1,0 +1,35 @@
+@use "../tokens" as *
+  
+.page-visual
+  .hero
+    color: $color_white
+    background: $color_primary
+    span
+      font-size: 1rem
+  .gallery-grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: $space-6
+  .gallery-item
+    position: relative
+    overflow: hidden
+    border-radius: $space-4
+    img
+      width: 100%
+      display: block
+      transition: transform .4s ease
+    .gallery-overlay
+      position: absolute
+      inset: 0
+      background: rgba($color_black, .45 )
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      padding: $space-6
+      opacity: 0
+      transition: opacity .3s ease
+    &:hover
+      img
+        transform: scale(1.04)
+      .gallery-overlay
+        opacity: 1
