@@ -35,6 +35,15 @@
     color: $color_text_tertiary
   .case-meta__value
     font-weight: $font-weight-medium
+  .case-meta__block
+    display: flex
+    justify-content: center
+    gap: $space-5
+    padding: $space-5 0
+    border-top: 1px solid $color_light
+    border-bottom: 1px solid $color_light
+    .case-meta__item
+      width: calc( 100% / 4 - $space-5 )
   .case-intro__container
     @include lg
       padding: 0 0 calc( $space-1 * 10 ) 0

@@ -1,28 +1,36 @@
 @use '../tokens' as *
 
-.hero-title
-  display: flex
-  align-items: center
-  flex-wrap: wrap
-  gap: $space-sm
-  @include lg
-    gap: $space-4
-.hero-name
-  color: $color_primary
-.hero-avatar
-  width: 3rem
-  border-radius: $space-xl
-  @include md
-    width: 4rem
-.hero-highlight
-  position: relative
-  color: $color_primary
-  &::after
-    content: ''
-    position: absolute
-    bottom: $space-1
-    left: 0
-    width: 100%
-    height: $space-3
-    background: rgba( $color_accent , .3 )
-    z-index: -1
+.page-home
+  .hero-title
+    margin-bottom: $space-5
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: $space-sm
+    @include lg
+      gap: $space-4
+  .hero-name
+    color: $color_primary
+  .hero-avatar
+    width: 3rem
+    border-radius: $space-xl
+    @include md
+      width: 4rem
+  .hero-highlight
+    position: relative
+    color: $color_primary
+    &::after
+      content: ''
+      position: absolute
+      bottom: $space-1
+      left: 0
+      width: 100%
+      height: $space-3
+      background: rgba( $color_accent , .3 )
+      z-index: -1
+  .hero-sub-small
+    font-size: 1.5rem
+  .hero-group-info
+    margin-top: $space-5
+  .hero-description
+    margin-bottom: $space-2
