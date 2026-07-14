@@ -38,3 +38,25 @@
     .work-img
       opacity: 1
       transform: scale(1.03)
+
+.card-creative
+  position: relative
+  .creative-thumb
+    aspect-ratio: 4 / 3
+    overflow: hidden
+    border-radius: $space-md
+  .creative-info
+    position: absolute
+    inset: 0
+    background: rgba($color_primary, .88 )
+    color: $color_white
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    padding: $space-4
+    opacity: 0
+    border-radius: $space-md
+    transition: opacity .3s ease
+  &:hover
+    .creative-info
+      opacity: 1

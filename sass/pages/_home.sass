@@ -1,26 +1,27 @@
 @use "../tokens" as *
 
 .page-home
-  .section-work, .section-visual
+  .section-work, .section-creative
     background: $color_bg
-  .section--subtitle
-    font-family: $font-family-accent
-    font-weight: $font-weight-regular
-    margin-left: $space-1
-  .work-img
-    border-radius: $space-5
-  .work-info
-    margin-top: $space-3
-  .section-visual
-    h2
+  .section-header
       margin-bottom: $space-5
       @include md
         margin-bottom: $space-8
       @include lg
         margin-bottom: $space-12
-    .visual-btns-wrap
-      margin: $space-8 auto
-      text-align: center
-      display: none
-  .visual-list
+  .section--subtitle
+    font-family: $font-family-accent
+    font-weight: $font-weight-regular
+    margin-left: $space-1
+  .section--description
+    color: $color_text_secondary
+  .work-img
+    border-radius: $space-5
+  .work-info
+    margin-top: $space-3
+  .creative-btns-wrap
+    display: none
+    margin: $space-8 auto
+    text-align: center
+  .creative-list
     margin-bottom: $space-5
