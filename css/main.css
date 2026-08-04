@@ -180,6 +180,7 @@ main {
 @media (min-width: 768px) {
   .grid-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
   }
 }
 @media (min-width: 992px) {
@@ -228,31 +229,112 @@ main {
 .navbar .navbar-name:hover {
   color: #EA8F33;
 }
-.navbar .navbar-nav .nav-link {
-  font-weight: 500;
-  color: #575756;
-  border-bottom: 2px solid rgba(63, 67, 166, 0);
-  margin: 0 8px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+
+.dianNavbar .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
-.navbar .navbar-nav .nav-link:hover {
-  color: #3F43A6;
-  border-bottom: 2px solid #3F43A6;
+.dianNavbar .nav-link .nav-link-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333333;
 }
-.navbar .navbar-nav .nav-link:active {
-  color: #3F43A6;
-  border-bottom: 2px solid #3F43A6;
+.dianNavbar .nav-link .nav-link-sub {
+  font-size: 0.85rem;
+  color: #9D9D9C;
 }
-.navbar .navbar-nav .active {
-  color: #3F43A6;
-  border-bottom: 2px solid #3F43A6;
+.dianNavbar .nav-link::after {
+  display: none;
+}
+.dianNavbar .nav-link.active {
+  background-color: #DFE4EE;
+}
+.dianNavbar .nav-link.active .nav-link-text, .dianNavbar .nav-link.active .nav-link-sub {
+  color: #32368A;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
-  .navbar .navbar-collapse {
+  .dianNavbar .navbar-collapse {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end;
+            justify-content: end;
+  }
+  .dianNavbar .navbar-nav {
+    gap: 1.5rem;
+  }
+  .dianNavbar .nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 0;
+    overflow: hidden;
+  }
+  .dianNavbar .nav-link .nav-link-sub {
+    display: none;
+  }
+  .dianNavbar .nav-link .nav-link-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  .dianNavbar .nav-link::after {
+    display: block;
+    content: attr(data-title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #32368A;
+    font-weight: 600;
+    font-size: 1.125rem;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+    transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  .dianNavbar .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #32368A;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  .dianNavbar .nav-link.active {
+    background-color: transparent;
+  }
+  .dianNavbar .nav-link:hover .nav-link-text, .dianNavbar .nav-link.active .nav-link-text {
+    color: transparent;
+  }
+  .dianNavbar .nav-link:hover::after, .dianNavbar .nav-link.active::after {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+  .dianNavbar .nav-link:hover::before, .dianNavbar .nav-link.active::before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
@@ -421,6 +503,45 @@ main {
   }
 }
 
+.c-btn-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(50, 54, 138, 0.88);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.c-btn-to-top:hover {
+  background-color: #55567B;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+.c-btn-to-top:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .card-work {
   margin: 48px 0;
   -webkit-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -473,6 +594,8 @@ main {
 
 .card-creative {
   position: relative;
+  -webkit-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .card-creative .creative-thumb {
   aspect-ratio: 4/3;
@@ -482,7 +605,8 @@ main {
 .card-creative .creative-info {
   position: absolute;
   inset: 0;
-  background: rgba(50, 54, 138, 0.88);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%, #32368A));
+  background: linear-gradient(180deg, transparent 0%, #32368A 80%);
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -495,13 +619,27 @@ main {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 16px;
-  opacity: 0;
+  opacity: 1;
   border-radius: 16px;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.card-creative:hover .creative-info {
-  opacity: 1;
+@media (min-width: 992px) {
+  .card-creative .creative-info {
+    background: rgba(50, 54, 138, 0.88);
+    opacity: 0;
+    border-radius: 4px;
+  }
+  .card-creative .creative-thumb {
+    border-radius: 4px;
+  }
+  .card-creative:hover .creative-thumb {
+    border-radius: 16px;
+  }
+  .card-creative:hover .creative-info {
+    opacity: 1;
+    border-radius: 16px;
+  }
 }
 
 .page-home .section-work, .page-home .section-creative {
@@ -535,12 +673,14 @@ main {
   margin-top: 12px;
 }
 .page-home .creative-btns-wrap {
-  display: none;
   margin: 32px auto;
   text-align: center;
 }
 .page-home .creative-list {
   margin-bottom: 20px;
+}
+.page-home .section-work {
+  scroll-margin-top: 4rem;
 }
 
 /* about me ----------------------------- */
@@ -558,6 +698,9 @@ main {
 }
 @media (min-width: 992px) {
   .page-about .hero__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -570,8 +713,11 @@ main {
 }
 @media (min-width: 992px) {
   .page-about .hero__content {
-    width: 55%;
+    width: 50%;
   }
+}
+.page-about .hero-name {
+  color: #32368A;
 }
 .page-about .hero__media {
   width: 100%;
@@ -607,6 +753,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 16px 8px;
@@ -623,6 +772,36 @@ main {
   background: #DFE4EE;
   color: #3F43A6;
   border-color: #3F43A6;
+}
+.page-about .skills__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.page-about .skills__cards .skills__list {
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .page-about .skills__cards {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.page-about .skills__category {
+  font-weight: 400;
+  color: #575756;
+  margin-right: 16px;
 }
 .page-about .skills__list--bullets {
   gap: 8px;

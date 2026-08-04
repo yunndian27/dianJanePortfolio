@@ -39,8 +39,10 @@
       opacity: 1
       transform: scale(1.03)
 
+// creative 的卡片
 .card-creative
   position: relative
+  @include transition(all .4s cubic-bezier(0.16, 1, 0.3, 1))
   .creative-thumb
     aspect-ratio: 4 / 3
     overflow: hidden
@@ -48,15 +50,26 @@
   .creative-info
     position: absolute
     inset: 0
-    background: rgba($color_primary, .88 )
+    // background: rgba($color_primary, .77 )
+    background: linear-gradient(180deg,transparent 0%,$color_primary 80%)
     color: $color_white
     display: flex
     flex-direction: column
     justify-content: flex-end
     padding: $space-4
-    opacity: 0
+    opacity: 1
     border-radius: $space-md
     transition: opacity .3s ease
-  &:hover
+  @include lg
     .creative-info
-      opacity: 1
+      background: rgba($color_primary, .88 )
+      opacity: 0
+      border-radius: $space-xs
+    .creative-thumb
+      border-radius: $space-xs
+    &:hover
+      .creative-thumb
+        border-radius: $space-md
+      .creative-info
+        opacity: 1
+        border-radius: $space-md

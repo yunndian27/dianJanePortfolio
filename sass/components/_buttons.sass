@@ -67,3 +67,28 @@
   margin-top: $space-lg
   @include lg
     gap: $space-md
+
+.c-btn-to-top
+  position: fixed
+  bottom: 2rem
+  right: 2rem
+  z-index: 999
+  width: $space-12
+  height: $space-12
+  border-radius: 50%
+  background-color: rgba($color_primary , .88)
+  color: $color_white
+  border: none
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  opacity: 0
+  visibility: hidden
+  pointer-events: none
+  transition: background-color 0.3s ease, transform 0.2s ease
+  &:hover
+    background-color: $color_tertiary
+    transform: translateY(-3px)
+  &:active
+    transform: translateY(0)

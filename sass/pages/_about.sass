@@ -10,12 +10,15 @@
   .hero__container
     flex-wrap: wrap-reverse
     @include lg
+      justify-content: space-between
       align-items: center
       flex-wrap: wrap
   .hero__content
     width: 100%
     @include lg
-      width: 55%
+      width: 50%
+  .hero-name
+    color: $color_primary
   .hero__media
     width: 100%
     @include lg
@@ -39,6 +42,7 @@
     margin-top: $space-5
   .skills__list--tags
     display: flex
+    align-items: center
     flex-wrap: wrap
     gap: $space-md $space-sm
     .skills__item
@@ -51,6 +55,20 @@
         background: $color_light
         color: $color_secondary
         border-color: $color_secondary
+  .skills__cards
+    display: flex
+    gap: $space-md
+    margin: $space-md 0
+    flex-direction: column
+    .skills__list
+      margin-top: 0
+    @include md
+      align-items: center
+      flex-direction: row
+  .skills__category
+    font-weight: $font-weight-regular
+    color: $color_text_secondary
+    margin-right: $space-md
   .skills__list--bullets
     gap: $space-2
     .skills__item
