@@ -1,36 +1,75 @@
 @use '../tokens' as *
 
 .page-home
-  .hero-title
-    margin-bottom: $space-5
+  margin-top: 0
+  .hero
+    position: relative
+    overflow: hidden
+    height: 100vh
+    background: $color_light
     display: flex
     align-items: center
-    flex-wrap: wrap
-    gap: $space-sm
-    @include lg
-      gap: $space-4
-  .hero-name
-    color: $color_primary
-  .hero-avatar
-    width: 3rem
-    border-radius: $space-xl
-    @include md
-      width: 4rem
-  .hero-highlight
-    position: relative
-    color: $color_primary
-    &::after
-      content: ''
-      position: absolute
-      bottom: $space-1
-      left: 0
-      width: 100%
-      height: $space-3
-      background: rgba( $color_accent , .3 )
-      z-index: -1
-  .hero-sub-small
-    font-size: 1.5rem
+  .hero-container
+    text-align: center
+    z-index: 99
+  .hero-title
+    margin-bottom: $space-5
+    display: inline-block
+    span
+      position: relative
+      color: $color_text_light
+      padding: 5px 10px
+      animation: displayText 12s infinite
+      animation-delay: calc( -3s * var(--i) )
+      &::before
+        content: attr(data-text)
+        position: absolute
+        left: 0
+        top: 0
+        width: 0
+        height: 100%
+        color: $color_secondary
+        overflow: hidden
+        white-space: nowrap
+        border-right: 2px solid $color_secondary
+        box-sizing: border-box
+        padding: 5px 10px
+        animation: animateText 3s linear infinite
   .hero-group-info
-    margin-top: $space-5
+    margin: $space-5 auto
+    width: 100%
+    @include md
+      width: 70vw
+    @include xl
+      width: 50vw
   .hero-description
     margin-bottom: $space-2
+    color: $color_text_tertiary
+  .btn-actions
+    justify-content: center
+    &:nth-child(odd)
+      padding-top: calc( $space-1 * 20 )
+  .bg-circle
+    position: absolute
+    transform: translate(-50%,-50%)
+    width: 800px
+    height: 800px
+    border-radius: 50%
+  .bg-circle1
+    background: radial-gradient($color_accent,transparent 65%)
+    top: 0%
+    left: 10%
+    opacity: 0.7
+    animation: animateMove1 7s ease infinite alternate
+  .bg-circle2
+    background: radial-gradient($color_white,transparent 70%)
+    top: 30%
+    left: 50%
+    animation: animateMove2 8s ease infinite alternate
+  .bg-circle3
+    background: radial-gradient($color_secondary,transparent 65%)
+    top: 100%
+    left: 50%
+    opacity: 0.7
+    animation: animateMove3 10s ease infinite alternate
+    animation-delay: 2s

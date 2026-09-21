@@ -38,12 +38,17 @@
   .case-meta__block
     display: flex
     justify-content: center
+    flex-direction: column
     gap: $space-5
     padding: $space-5 0
     border-top: 1px solid $color_light
     border-bottom: 1px solid $color_light
     .case-meta__item
-      width: calc( 100% / 4 - $space-5 )
+      width: 100%
+    @include lg
+      flex-direction: row
+      .case-meta__item
+        width: calc( 100% / 4 - $space-5 )
   .case-intro__container
     @include lg
       padding: 0 0 calc( $space-1 * 10 ) 0

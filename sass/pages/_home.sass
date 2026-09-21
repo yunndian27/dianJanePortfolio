@@ -4,11 +4,12 @@
   .section-work, .section-creative
     background: $color_bg
   .section-header
-      margin-bottom: $space-5
-      @include md
-        margin-bottom: $space-8
-      @include lg
-        margin-bottom: $space-12
+    text-align: center
+    margin: $space-8 0
+    @include md
+      margin: calc( $space-1 * 10 ) 0
+    @include lg
+      margin: calc( $space-1 * 15 ) 0
   .section--subtitle
     font-family: $font-family-accent
     font-weight: $font-weight-regular
@@ -27,3 +28,73 @@
     margin-bottom: $space-5
   .section-work
     scroll-margin-top: 4rem
+  .section-goodAt
+    position: relative
+    overflow: hidden
+    background: $color_primary
+    padding: calc( $space-1 * 20 ) 0
+    display: flex
+    align-items: center
+    .container
+      z-index: 99
+    h2
+      color: $color_text_light
+      text-align: center
+    span
+      color: $color_accent
+    .bg-circle
+      position: absolute
+      transform: translate(-50%,-50%)
+      width: 600px
+      height: 600px
+      opacity: 0.5
+  .skills-list
+    position: relative
+    display: grid
+    grid-template-columns: minmax(auto,auto)
+    margin: 0px
+    grid-auto-flow: dense
+    grid-gap: 10px
+  .skills-box
+    background: transparent
+    color: $color_light
+    border: 1px solid $color_light
+    border-radius: $space-4
+    padding: 20px
+    display: grid
+    place-items: center
+    text-align: center
+    transition: 0.5s
+    grid-column: unset
+    grid-row: unset
+    &:hover
+      background: $color_accent
+      color: $color_primary
+      border-color: $color_accent
+    svg
+      position: relative
+      max-width: 100px
+      margin: 0 auto 10px auto
+  @include md
+    .skills-list
+      margin: 40px
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+      grid-template-rows: minmax(150px, auto)
+    .skills-box
+      &:nth-child(1)
+        grid-column: span 2
+        grid-row: span 1
+      &:nth-child(2)
+        grid-column: span 1
+        grid-row: span 2
+      &:nth-child(4)
+        grid-column: span 1
+        grid-row: span 2
+      &:nth-child(5)
+        grid-column: span 3
+        grid-row: span 1
+  @include lg
+    .skills-list
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr))
+      grid-template-rows: minmax(150px, auto)
+    

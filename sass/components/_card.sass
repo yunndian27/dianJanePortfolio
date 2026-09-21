@@ -39,6 +39,37 @@
       opacity: 1
       transform: scale(1.03)
 
+.card-work-new
+  margin-bottom: calc( $space-1 * 40 )
+  &:last-child
+    margin-bottom: calc( $space-1 * 30 )
+  .work-link
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: $space-6
+    flex-direction: column-reverse
+  .work-img
+    display: block
+    width: 100%
+    opacity: 0.7
+    will-change: transform, opacity
+    @include transition(all .5s cubic-bezier(0.16, 1, 0.3, 1))
+  &:hover
+    .work-title
+      color: $color_primary
+    .work-img
+      opacity: 1
+      transform: scale(1.03)
+  @include lg
+    margin-bottom: calc( $space-1 * 60 )
+    .work-link
+      gap: $space-12
+      flex-direction: row
+    &:nth-child(even)
+      .work-link
+        flex-direction: row-reverse
+
 // creative 的卡片
 .card-creative
   position: relative
