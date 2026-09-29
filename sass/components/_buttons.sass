@@ -17,7 +17,7 @@
     font-size: $font-size-h3
     padding: $space-sm $space-xl
   &:hover
-    transform: translateY(-2px)
+    transform: scale(0.98)
 
 .material-icons
   font-size: 1.25rem
@@ -35,8 +35,8 @@
   @extend .btn
   background-color: $color_primary
   &:hover, &:active
-    background-color: $color_light
-    color: $color_primary
+    background-color: $color_accent
+    color: color-mix($color_primary,$color_text_primary)
 
 .btn-secondary
   @extend .btn
@@ -44,8 +44,8 @@
   color: $color_primary
   border: 2px solid $color_primary
   &:hover, &:active
-    background-color: rgba($color_accent, .1)
-    color: $color_accent
+    background-color: rgba($color_accent, .3)
+    color: $color_secondary
     border-color: $color_accent
 
 .btn-link 
@@ -99,7 +99,7 @@
   pointer-events: none
   transition: background-color 0.3s ease, transform 0.2s ease
   &:hover
-    background-color: $color_tertiary
+    background-color: $color_accent
     transform: translateY(-3px)
   &:active
     transform: translateY(0)
