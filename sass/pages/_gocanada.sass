@@ -1,0 +1,242 @@
+@use "../tokens" as *
+@use '../helpers' as *
+
+.page-case
+  section
+    background: $color_bg
+    &:nth-child(2)
+      background: $color_white
+  .case-hero__container, .case-intro__block
+    @include flex-wrap
+    gap: $space-1
+    @include lg
+      gap: $space-5
+  .case-hero__container
+    flex-wrap: wrap-reverse
+    @include lg
+      flex-wrap: wrap
+  .case-hero__content, .case-intro__title, .case-intro__subtitle
+    width: 100%
+    margin-top: $space-5
+    @include lg
+      width: 30%
+      margin-top: 0
+  .case-hero__media, .case-intro__info, .case-intro__list
+    width: 100%
+    @include lg
+      width: calc( 70% - $space-5 )
+  .case-hero__img
+    border-radius: $space-5
+  .case-hero__content
+    @include flex-wrap
+    align-content: space-between
+  .case-meta__label
+    font-weight: $font-weight-regular
+    color: $color_text_tertiary
+  .case-meta__value
+    font-weight: $font-weight-medium
+  .case-meta__block
+    display: flex
+    justify-content: center
+    flex-direction: column
+    gap: $space-5
+    padding: $space-5 0
+    border-top: 1px solid $color_light
+    border-bottom: 1px solid $color_light
+    .case-meta__item
+      width: 100%
+    @include lg
+      flex-direction: row
+      .case-meta__item
+        width: calc( 100% / 4 - $space-5 )
+  .case-intro__container
+    @include lg
+      padding: 0 0 calc( $space-1 * 10 ) 0
+  .case-intro__title
+    font-size: $font-size-h2
+    font-weight: $font-weight-bold
+    color: $color_primary
+  .case-intro__subtitle
+    font-size: calc( $font-size-body-m * 1.125 )
+    color: $color_text_primary
+  .case-goal
+    background-color: rgba($color_light , .3 )
+    border-left: 3px solid $color_secondary
+    border-radius: 0 $space-5 $space-5 0
+    padding: $space-4 $space-5
+    margin-top: $space-5
+    p
+      margin-bottom: 0
+  .case-problem__list
+    @include flex-wrap
+    justify-content: center
+  .case-problem__item
+    text-align: center
+    width: 100%
+    @include md
+      width: calc( 100% / 2 - $space-5 )
+    @include lg
+      width: calc( 100% / 3 - $space-5 )
+  .case-problem__block
+    @include flex-wrap
+    margin-top: $space-5
+  .case-item__title
+    font-size: $mobile-font-size-body-m
+    font-weight: $font-weight-bold
+    @include md
+      font-size: $font-size-body-l
+  .case-item__title
+    font-size: calc( $font-size-body-m * 1.125  )
+    font-weight: $font-weight-bold
+    margin-top: $space-3
+  hr
+    color: $color_tertiary
+  .case-section__block
+    margin-top: $space-8
+    @include md
+      margin-top: $space-12
+  .case-section__title
+    font-weight: $font-weight-bold
+    color: $color_primary
+    @include lg
+      font-size: $font-size-h2
+  .case-section__subtitle
+    font-weight: $font-weight-medium
+    color: $color_text_tertiary
+  .case-section__text
+    width: 100%
+    @include lg
+      width: 50%
+  .case-block__col
+    width: 100%
+    margin-top: $space-3
+    @include md
+      width: calc( 100% / 2 - $space-5 )
+      margin-top: 0
+  .case-block__img
+    border-radius: $space-3
+    @include md
+      border-radius: $space-5
+  li::marker
+    color: $color-secondary
+
+.page-gocanada
+  .case-itme__text
+    color: $color_text_secondary
+  .case-problem__block
+    .case-section__title
+      width: 100%
+      @include lg
+        width: 30%
+    .case-section__list
+      width: 100%
+      @include lg
+        width: calc( 70% - $space-5 )
+    .case-product__item
+      margin-left: $space-5
+      list-style: disc
+  .case-key
+    .case-section__title
+      text-align: center
+  .case-key__list
+    @include flex-wrap
+    justify-content: center
+  .case-key__item
+    width: 100%
+    // text-align: center
+    color: $color_text_secondary
+    @include md
+      width: calc( 100% / 2 - $space-5 )
+    @include lg
+      width: calc( 100% / 3 - $space-5 )
+  .case-key__text
+    margin: $space-5 0
+  .case-key__item
+    text-align: center
+  .case-strategy__list
+    @include flex-wrap
+    justify-content: center
+  .case-strategy__item
+    font-size: calc( $font-size-body-m * 1.125 )
+    font-weight: $font-weight-bold
+    text-align: center
+    width: 100%
+    @include md
+      width: calc( 100% / 2 - $space-5 )
+    @include lg
+      width: calc( 100% / 3 - $space-5 )
+  .case-design__row
+    @include flex-wrap
+    margin-top: $space-5
+  .case-design__col
+    @include flex-wrap
+    width: 100%
+    @include md
+      width: calc( 100% / 2 - $space-5 )
+  .case-solution
+    .case-section__block
+      position: relative
+      margin-top: calc( $space-1 * 10 )
+      &:nth-child(3)
+        @include flex-wrap
+        flex-direction: column-reverse
+  .case-solution__note
+    position: relative
+    width: 100%
+    background: $color_light
+    padding: $space-4
+    border-radius: $space-5
+    @include lg
+      position: absolute
+      bottom: 5%
+      left: 3%
+      width: 30%
+      padding: $space-5 calc( $space-1 * 10 )
+  .case-solution__gif
+    border-radius: $space-5
+  .case-impact
+    .case-section__block
+      @include flex-wrap
+      justify-content: space-between
+      gap: $space-3
+      margin-top: calc( $space-5 * 2 )
+      &:nth-child(2n)
+        display: flex
+        flex-direction: row-reverse
+      @include lg
+        gap: calc( $space-5 * 2 )
+  .case-impact__col
+    width: 100%
+    margin: auto 0
+    @include md
+      width: calc( 100% / 2 - $space-5 * 2 )
+  .case-impact__text
+    margin: $space-2 0
+  .case-impact__note
+    margin: 0 auto
+  .case-reflection
+    .case-section__block
+      @include flex-wrap
+      justify-content: space-between
+      margin-top: 0
+      @include md
+        margin-top: $space-5
+  .case-reflection__col
+    width: 100%
+    margin-top: $space-3
+    @include md
+      width: calc( 100% / 2 - $space-5 )
+      margin-top: 0
+  .case-reflection__list
+    margin-left: $space-5
+    margin-top: $space-3
+    @include lg
+      margin-top: $space-5
+  .case-reflection__item
+    list-style: disc
+  .case-final
+    .case-section__block
+      text-align: center
+      margin-top: $space-5
+  .case-final
+    display: none

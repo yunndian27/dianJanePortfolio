@@ -1,0 +1,92 @@
+@use '../tokens' as *
+// 使用完整的 @mixin 宣告
+  
+// 快速置中
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin flex-wrap
+  display: flex
+  flex-wrap: wrap
+  gap: $space-3
+  @include lg
+    gap: $space-5
+
+// 現代 Transition
+@mixin transition($args...)
+  transition: $args
+
+// 圖片覆蓋 (Object-fit)
+@mixin img-cover
+  width: 100%
+  height: auto
+  object-fit: cover
+
+//毛玻璃效果
+@mixin glassmorphism
+  backdrop-filter: blur(30px)
+  -webkit-backdrop-filter: blur(30px)
+  background-color: rgba(255, 255, 255, 0.38)
+
+// ============================================================
+// Typography
+// ============================================================
+=text-display-xl
+  font-size: $mobile-font-size-h1
+  line-height: $line-height-tight
+  font-weight: $font-weight-bold
+  @include sm
+    font-size: $font-size-display-xl
+
+=text-display-l
+  font-size: $mobile-font-size-h2
+  line-height: $line-height-tight
+  font-weight: $font-weight-bold
+  @include sm
+    font-size: $font-size-display-l
+
+=text-h1
+  font-size: $mobile-font-size-h1
+  font-weight: $font-weight-bold
+  line-height: $line-height-tight
+  @include md
+    font-size: $font-size-h1
+
+=text-h2
+  font-size: $mobile-font-size-h2
+  font-weight: $font-weight-bold
+  line-height: $line-height-tight
+  @include md
+    font-size: $font-size-h2
+
+=text-h3
+  font-size: $mobile-font-size-h3
+  font-weight: $font-weight-bold
+  line-height: $line-height-tight
+  @include md
+    font-size: $font-size-h3
+
+=text-h4
+  font-size: $font-size-body-l
+  font-weight: $font-weight-bold
+  line-height: $line-height-tight
+  @include md
+    font-size: $font-size-h4
+
+=text-body
+  font-size: $font-size-body-m
+  font-weight: $font-weight-regular
+  line-height: $line-height-base
+
+=text-caption
+  font-size: $font-size-caption
+  line-height: 1.5
+
+// 英文字體-粗
+// 括號拿掉，它就會直接從全域尋找這些變數
+@mixin font-accent-bold
+  font-family: $font-family-accent
+  font-weight: $font-weight-bold
+  line-height: $line-height-none

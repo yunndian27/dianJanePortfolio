@@ -1,0 +1,42 @@
+@use '../tokens' as *
+@use '../helpers' as *
+  
+body
+  font-family: $font-family-primary
+  font-size: $font-size-body-m
+  font-weight: $font-weight-regular
+  line-height: $line-height-base
+  letter-spacing: $letter-spacing-normal
+  color: $color_text_primary
+  cursor: url('../images/jane/cursor.svg'), pointer
+img 
+  @include img-cover
+    
+a 
+  text-decoration: none
+  @include transition(all .3s ease)
+  color: inherit
+  &:hover
+    cursor: url('../images/jane/cursor_star.svg'), pointer
+
+h1
+  +text-h1
+  letter-spacing: $letter-spacing-tight
+  // color: $color_black
+
+h2
+  +text-h2
+  letter-spacing: $letter-spacing-tight
+  // color: $color_black
+
+h3
+  +text-h3
+  letter-spacing: $letter-spacing-normal
+  // color: $color_primary
+
+h4
+  +text-h4
+
+.en-accent 
+  font-family: $font-family-accent
+  font-weight: $font-weight-bold

@@ -1,0 +1,12 @@
+// tokens/_index.sass
+// 設計規範：定義顏色、字體、間距變數。Tokens 層應該是最純粹的數據，最底層，不准引用任何人。
+// 使用 @forward 將內部檔案「轉發」出去
+@forward 'colors'
+@forward 'spacing'
+@forward 'typography'
+@forward 'breakpoints'
+@forward 'functions'
+@forward 'effect-tokens'
+@forward 'rwd'
+// 把 helpers 也轉發出去
+// @forward "../helpers"

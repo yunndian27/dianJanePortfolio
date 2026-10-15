@@ -1,0 +1,22 @@
+// base/_root.sass
+@use '../tokens' as *
+
+:root
+  // 1. 顏色映射 (使用 Sass 插補語法 #{$var})
+  --color-primary: #{$color-primary}
+  --color-bg: #{$color_bg}
+  --color-text: #{$color_text_primary}
+
+  // 2. 字體階層
+  --font-size-base: #{$font-size-body-m}
+  --font-size-h1: #{$font-size-h1}
+  --line-height-base: #{$line-height-base}
+
+  // 3. 間距單位
+  --space-unit: #{$space-unit}
+  --space-md: #{$space-md}
+  --space-lg: #{$space-lg}
+
+  // 4. 佈局數值
+  --header-height: 80px
+  --container-max-width: 1200px

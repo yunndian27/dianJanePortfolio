@@ -1,0 +1,46 @@
+@use "../tokens" as *
+@use '../helpers' as *
+
+.page-advace
+  .case-hero__title small
+    font-weight: $font-weight-regular
+  .case-info__block
+    margin-top: $space-5
+  .case-decision__list, .case-key__list
+    +flex-wrap
+    gap: $space-8
+    @include md
+      gap: $space-12
+  .case-decision__item, .case-key__item
+    +flex-wrap
+    align-items: center
+  .case-decision__media, .case-key__media
+    width: 100%
+    @include md
+      width: 50%
+    @include lg
+      width: 40%
+  .case-decision__info, .case-key__info
+    width: 100%
+    @include md
+      width: calc( 50% - $space-5 )
+    @include lg
+      width: calc( 60% - $space-5 )
+  .case-excution__item
+    margin-bottom: $space-12
+  .case-key__item
+    flex-direction: column-reverse
+    @include md
+      flex-direction: row
+  .case-reflection
+    .case-section__block:last-child
+      +flex-wrap
+      justify-content: space-between
+      @include lg
+        justify-content: space-around
+    .case-block__col
+      width: 100%
+      @include md
+        width: calc( 100% / 2 - $space-5 )
+      @include lg
+        width: calc( 100% / 3 - $space-5 )
